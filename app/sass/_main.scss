@@ -1,23 +1,28 @@
-
 // BLOCKS *****************************************************
 .btn {
     position: relative;
     width: 210px;
     height: 48px;
-    background: $secondary2;
+    background: $primary;
     display: flex;
     overflow: hidden;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    font-size: 1.6rem;
+    color: white;
+    transition: all .2s ease-in-out;
+
+
 
     &:hover {
         cursor: pointer;
-        background: #9D0909
+        background: #02173D;
+
     }
 
     &:hover .btn_icon {
-        background-color: $secondary3;
+        background-color: white;
 
         .icon-arrow_forward::before {
             color: #fff;
@@ -60,8 +65,10 @@
 .row-flex {
     @include row-flex();
 }
+
 html {
     background: #CDCDCD;
+    font-size: 10px;
 }
 
 body {
@@ -70,8 +77,10 @@ body {
     margin: 0 auto;
     position: relative;
     background-color: #ffff;
+
 }
-a{
+
+a {
     cursor: pointer;
 }
 
@@ -85,6 +94,7 @@ a{
     padding-bottom: 312px;
 
     &_top {
+        box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -142,7 +152,7 @@ a{
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 126px;
+        
     }
 
     &_nav-right {
@@ -191,12 +201,15 @@ a{
 
 /********MENU BLOCK****************/
 .menu {
-    @include size(7);
+    //@include size(7);
 
     &_list {
+        
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 40px;
+        width: 630px;
 
         @include xs-block() {
             display: none;
@@ -208,12 +221,22 @@ a{
                 display: block;
             }
         }
+        &>li {
+            margin-right: 10px;
+            height: 100%;
+            &:hover {
+                border-bottom: 2px solid $primary;
+            }
+        }
     }
 
     li {
         display: block;
-        margin-right: 10px;
         flex-shrink: 0;
+        height: 100%;
+        &:hover {
+            opacity: 1;
+        }
     }
 
     &_toggle {
@@ -255,23 +278,26 @@ a{
 
     a {
         color: #000000;
-        font-size: 14px;
-        font-weight: 700;
+        opacity: 0.6;
+        display: block;
+        font-size: 1.6rem;
+        font-family: "MullerMedium";
         line-height: 22px;
         letter-spacing: 0.15px;
+        transition: all .2s ease-in-out;
 
         &:hover {
-            color: $secondary1;
+           opacity: 1;
         }
     }
 }
 
-.menu_item-1 {
-    padding: 5px 20px 5px 40px;
+li.menu_item-1 {
+    // padding: 5px 20px 5px 40px;
 
     @include xs-block() {
         padding: 0;
-        width: 210px;
+        width: 230px;
     }
 }
 
@@ -279,64 +305,56 @@ a{
     background-color: #ffffff;
     @include xs(padding, 0 0 0 10px);
 
-    .menu_link-1 {
-        color: #2aacc8;
+    span {
+        transform: rotateZ(180deg);
     }
-
     .menu_drop-1 {
         display: block;
     }
 }
 
-.menu_item-5 {
-    padding: 5px 20px 5px 10px;
 
-    @include xs-block() {
-        padding: 0;
-        width: 210px;
+.menu_item-1 {
+    a {
+        display: flex;
+        align-items: center;
     }
-}
-
-.menu_item-5:hover {
-    background-color: #ffffff;
-    @include xs(padding, 0 0 0 10px);
-
-    .menu_link-5 {
-        color: #2aacc8;
-    }
-
-    .menu_drop-2 {
+    span {
         display: block;
     }
 }
 
-.menu_item-1 span {
-    vertical-align: middle;
-}
-
-.menu_item-5 span {
-    vertical-align: middle;
-}
-
-.menu_drop-1,
-.menu_drop-2 {
+.menu_drop-1{
     z-index: 1000;
     position: absolute;
-    margin-top: 5px;
-    margin-left: -10px;
-    padding-left: 15px;
-    padding-right: 15px;
+    top: 30px;
+    // margin-top: 5px;
+    // margin-left: -10px;
+    // padding-left: 15px;
+    // padding-right: 15px;
     width: 210px;
     background-color: #ffffff;
     display: none;
+    box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+    border-radius: 5px;
 
     @include xs-block() {
         position: static;
     }
 
     li {
-        display: list-item;
-        border-bottom: solid 1px black;
+        padding-bottom: 5px;
+        margin-right: 0;
+        padding-left: 20px;
+        border-bottom: solid 1px #EDEDEE;
+        transition: all .2s ease-in-out;
+        &:hover{
+            background:$primary;
+            a{
+                color:white;
+            }
+        }
+
     }
 
     li:last-child {
@@ -345,18 +363,7 @@ a{
 
     a {
         line-height: 36px;
-        font-weight: 500;
-        text-transform: none;
     }
-}
-
-.menu_drop-1 {
-    border-bottom: solid 5px #2aacc8;
-
-}
-
-.menu_drop-2 {
-    border-bottom: solid 5px #2aacc8;
 }
 
 /************ END OF MENU BLOCK**********/
@@ -516,7 +523,7 @@ div img[src="images/Blob 2.png"] {
     &_card {
         @include col();
         @include size(4);
-       
+
         text-align: center;
         padding: 50px 44px;
         margin-bottom: 24px;

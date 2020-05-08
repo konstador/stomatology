@@ -145,10 +145,6 @@ a {
     text-decoration: none;
 }
 
-ul {
-    list-style: none;
-}
-
 button:active,
 button:focus {
     outline: none;
@@ -159,51 +155,9 @@ button {
     padding: 0;
 }
 
-* {
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-button:active,
-button:focus {
-    outline: none;
-}
-
-button {
-    border: none;
-    padding: 0;
-}
 
 // reset****************************
 
-* {
-    box-sizing: border-box;
-}
-
-a {
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
-button:active,
-button:focus {
-    outline: none;
-}
-
-button {
-    border: none;
-    padding: 0;
-}
 input{
     border-width: 0px;
 }
