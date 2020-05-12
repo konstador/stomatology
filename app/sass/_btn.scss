@@ -1,0 +1,34 @@
+.btn {
+    height: 52px;
+    background: $primary;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    color: white;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        background: #02173D;
+
+    }
+    &--sm {
+        width: 150px;
+    }
+
+    &--mid {
+        width: 184px;
+    }
+
+    &--big {
+        width: 230px;
+    }
+
+
+   
+
+   
+}

@@ -21,10 +21,10 @@ gulp.task ('grid', function() { // Создаем таск Smar-grid
 var settings = {
     outputStyle: 'scss', /* less || scss || sass || styl */
     columns: 12, /* number of smagrid columns */
-    offset: '25px', /* gutter width px || % || rem */
+    offset: '30px', /* gutter width px || % || rem */
     mobileFirst: false, /* mobileFirst ? 'min-width' : 'max-width' */
     container: {
-        maxWidth: '1020px', /* max-width оn very large screen */
+        maxWidth: '1440px', /* max-width оn very large screen */
         fields: '0px' /* side fields */
     },
     breakPoints: {
@@ -35,7 +35,6 @@ var settings = {
         lg:{
             width: '1200px;',
         },
-
         md: {
             width: '992px',
             //fields: '20px'

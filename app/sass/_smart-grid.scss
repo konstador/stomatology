@@ -7,7 +7,7 @@ $break_md: 992px;
 $break_sm: 768px;
 $break_xs: 576px;
 
-$offset: 25px;
+$offset: 30px;
 $offset_xl: $offset;
 $offset_lg: $offset;
 $offset_md: $offset;
@@ -39,7 +39,7 @@ $fields: 0px;
 }
 
 @mixin wrapper(){
-    max-width: 1020px;
+    max-width: 1440px;
     margin: 0 auto;
     @include wrapper-full();
 }
