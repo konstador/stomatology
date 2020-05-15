@@ -30,7 +30,7 @@ a {
 
 .header {
     width: 100%;
-    padding-bottom: 312px;
+    padding-bottom: 120px;
     .wrapper{
          display: flex;
          justify-content: space-between;
@@ -98,10 +98,7 @@ a {
     @include row-flex();
     align-items:center;
     height: 180px;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
-    border-radius: 5px;
-
+    
     &_item{
         display: flex;
         align-items:start;
@@ -128,6 +125,12 @@ a {
     &_description{
         width: 65%;
     }
+}
+.advantages-wrapper{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+    border-radius: 5px;
+
 }
 
 
@@ -297,24 +300,27 @@ li.menu_item-1 {
 
 
 
-// ABOUT BLOCK******************************************
-.about {
-    background-color: $primary;
+// SERVICE BLOCK******************************************
+.service {
     @include wrapper();
-    padding-left: 6.04166666667%;
-    padding-right: 6.04166666667%;
-    padding-top: 100px;
-    margin-top: -70px;
-    margin-bottom: 220px;
-    border-radius: 40px;
-    height: 700px;
-
-    &_title {
-        font-weight: 900;
-        line-height: 42px;
-        color: #FFFFFF;
-        text-align: left;
-        margin-bottom: 36px;
+    height: 660px;
+    display: flex;
+    justify-content: space-between;
+    &_about{
+        width: 55.9864%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &_feedback{
+        width: 39.5918%;
+    }
+    &_subtitle {
+        font-family: "MullerBold";
+        font-size: 24px;
+        line-height: 87%;
+        letter-spacing: 0.02em;
     }
 
     &_text {
@@ -324,9 +330,71 @@ li.menu_item-1 {
         color: #F5F5F5;
     }
 
-    &_subtitle {
-        color: white;
+    &_discription,
+    &_price-discription {
+        font-size: 1.8rem;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        color: rgba(0, 0, 0, 0.6);
     }
+    &_price-discription li{
+        line-height: 32px;
+    }
+
+    &_danger{
+        display: flex;
+        &-text{
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-left: 20px;
+
+            p:nth-of-type(1){
+                font-family: MullerBold;
+                font-size: 2.4rem;
+                line-height: 2.4rem;
+                letter-spacing: 0.02em;
+            }
+            p:nth-of-type(2) {
+                font-family: MullerMedium;
+                font-size: 1.6rem;
+                line-height: 1.9rem;
+                letter-spacing: 0.02em;
+                color: rgba(0, 0, 0, 0.6);
+            }
+        }
+    }
+    &_price{
+        background: url(../images/Group26.jpg) no-repeat, $primary;
+        background-size:cover;
+        //background-color:$primary;
+        height: 135px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+        border-radius: 5px;
+        p:nth-of-type(1){
+            font-size: 2.4rem;
+            line-height: 24px;
+            letter-spacing: 0.02em;
+            color: #FFFFFF;
+            background-color:transparent;
+            margin-bottom: 8px;
+           
+        }
+        p:nth-of-type(2) {
+           font-size: 1.6rem;
+           line-height: 19px;
+           letter-spacing: 0.02em;
+           color: rgba(255, 255, 255, 0.6);
+           background-color:transparent;
+           
+        }
+    }
+    
 }
 
 div img[src="images/Blob 2.png"] {
