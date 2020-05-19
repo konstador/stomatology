@@ -1,0 +1,85 @@
+{
+  "IcoMoonType": "selection",
+  "icons": [
+    {
+      "icon": {
+        "paths": [
+          "M992 512c0 265.097-214.903 480-480 480s-480-214.903-480-480c0-265.097 214.903-480 480-480s480 214.903 480 480z",
+          "M800 512c0 159.058-128.942 288-288 288s-288-128.942-288-288c0-159.058 128.942-288 288-288s288 128.942 288 288z"
+        ],
+        "attrs": [
+          {
+            "fill": "none",
+            "stroke": "rgb(14, 166, 166)",
+            "strokeLinejoin": "miter",
+            "strokeLinecap": "butt",
+            "strokeMiterlimit": "4",
+            "strokeWidth": 64
+          },
+          {
+            "fill": "rgb(14, 166, 166)"
+          }
+        ],
+        "isMulticolor": false,
+        "isMulticolor2": true,
+        "grid": 14,
+        "tags": [
+          "point"
+        ]
+      },
+      "attrs": [
+        {
+          "fill": "none",
+          "stroke": "rgb(14, 166, 166)",
+          "strokeLinejoin": "miter",
+          "strokeLinecap": "butt",
+          "strokeMiterlimit": "4",
+          "strokeWidth": 64
+        },
+        {
+          "fill": "rgb(14, 166, 166)"
+        }
+      ],
+      "properties": {
+        "order": 3,
+        "id": 2,
+        "name": "point",
+        "prevSize": 28
+      },
+      "setIdx": 0,
+      "setId": 2,
+      "iconIdx": 0
+    }
+  ],
+  "height": 1024,
+  "preferences": {
+    "showGlyphs": true,
+    "showQuickUse": true,
+    "showQuickUse2": true,
+    "showSVGs": true,
+    "fontPref": {
+      "prefix": "icon-",
+      "metadata": {
+        "fontFamily": "icomoon"
+      },
+      "metrics": {
+        "emSize": 1024,
+        "baseline": 6.25,
+        "whitespace": 50
+      },
+      "embed": false
+    },
+    "imagePref": {
+      "prefix": "icon-",
+      "png": true,
+      "useClassSelector": true,
+      "color": 0,
+      "bgColor": 16777215,
+      "classSelector": ".icon",
+      "name": "icomoon"
+    },
+    "historySize": 50,
+    "showCodes": true,
+    "gridSize": 16
+  }
+}
