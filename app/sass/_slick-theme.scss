@@ -1,5 +1,5 @@
-.caries_slider-prev,
-.caries_slider-next {
+.btn-slider-prev,
+.btn-slider-next {
     cursor: pointer;
     position: absolute;
     display: flex;
@@ -14,7 +14,7 @@
         font-size: 4.2rem;
     }
 }
-.caries_slider-prev {
+.btn-slider-prev {
     top: 45%;
     left: -24px;
     z-index: 10;
@@ -23,7 +23,7 @@
     }
 }
 
-.caries_slider-next {
+.btn-slider-next {
     top: 45%;
     right: -24px;
     z-index: 10;
