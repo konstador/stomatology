@@ -117,7 +117,7 @@
 	<section class="service">
 		<div class="service_about">
 			<h2 class="service_title">Лечение кариеса</h2>
-			<p class="service_discription">Каждый зуб мы лечим по мировым стандартам под микроскопом. Все наши терапевты -
+			<p class="service_discription">Каждый зуб мы лечим по мировым стандартам под микроскопом.Все наши терапевты -
 				специалисты по лечению "микро". Сложная оптика позволяет врачу провести лечение предельно точно: удалить только
 				поврежденные ткани, пролечить сложные каналы, идеально восстановить форму зуба.</p>
 			<p class="service_subtitle">Из чего складывается стоимость лечения кариеса?</p>
@@ -155,30 +155,30 @@
 				<p>Цена от 2 990 рублей</p>
 				<p>Предварительная стоимость</p>
 			</div>
-			<form class="service_form">
-				<p class="service_form-title">Закажите обратный звонок</p>
-				<p class="service_form-subtitle">Запись по телефону +7 (8152) 707-600</p>
+			<form class="service_form feedback-form">
+				<p class="feedback-form_title">Закажите обратный звонок</p>
+				<p class="feedback-form_subtitle">Запись по телефону +7 (8152) 707-600</p>
 				<hr>
 
-				<div class="service_form-field">
-					<p class="service_form-caption">Ваше имя</p>
+				<div class="feedback-form_field service_form-field">
+					<p class="feedback-form_caption">Ваше имя</p>
 					<input type="text" name="name" placeholder="Иван">
 				</div>
-				<div class="service_form-field">
-					<p class="service_form-caption">Ваша фамилия</p>
+				<div class="feedback-form_field service_form-field">
+					<p class="feedback-form_caption">Ваша фамилия</p>
 					<input type="text" name="surname" placeholder="Дендак">
 				</div>
-				<div class="service_form-field">
-					<p class="service_form-caption">Ваш номер</p>
+				<div class="feedback-form_field service_form-field">
+					<p class="feedback-form_caption">Ваш номер</p>
 					<input type="tel" name="tel" placeholder="+7 800 555 35 35">
 				</div>
-				<div class="service_form-field">
-					<p class="service_form-caption">Комментарий</p>
+				<div class="feedback-form_field service_form-field">
+					<p class="feedback-form_caption">Комментарий</p>
 					<input type="text" name="comment">
 				</div>
 				
 				<button class="btn service_btn">Заказать звонок</button>
-				<p class="service_form-agreement">Нажимая кнопку «Заказать звонок», вы автоматически выражаете <span><a href="">согласие на обработку</a></span>
+				<p class="service_form-agreement feedback-form_agreement">Нажимая кнопку «Заказать звонок», вы автоматически выражаете <span><a href="">согласие на обработку</a></span>
 				своих персональных данных ООО «Глобал Дент».
 				</p>
 			</form>
@@ -187,8 +187,8 @@
 	<section class="caries">
 		<div class="wrapper">
 			<div class="caries_img">
-				<div class="btn-slider-prev"><span class="icon icon-expand_more"></span></div>
-				<div class="btn-slider-next"><span class="icon icon-expand_more"></span></div>		
+				<div class="btn-slider-prev caries_slider-prev"><span class="icon icon-expand_more"></span></div>
+				<div class="btn-slider-next caries_slider-next"><span class="icon icon-expand_more"></span></div>		
 				<div class="caries_slider">
 					<img src="images/smile.jpg" alt="Красивая улыбка">
 					<img src="images/smile.jpg" alt="Красивая улыбка">
@@ -568,61 +568,105 @@
 				</button>
 			</div>
 			
-			
-			
 		</div>
 	</section>
-	<section class="stat">
+	<section class="communication">
 		<div class="wrapper">
-			<div class="stat_bg">
-				<img src="images/dog-3.png" alt="Dog photo">
-			</div>
-			<p class="stat_subtitle section-caption">
-				<i class="icon icon-overline-mark"></i>
-				<span class="overline">OUR IMPACT</span>
-			</p>
-			<h3>Nemo enim ipsam voluptatem quia voluptas</h3>
-			<div class="stat_wrapBlocks">
-				<div class="stat_block">
-					<i class="icon icon-dog_duckling"></i>
-					<div class="stat_amount">
-						<span class="stat_number">3,700</span>
-						<span class="stat_what">puppy baths</span>
+			<form class="communication_form feedback-form">
+				<p class="feedback-form_title communication_form-title">Заполните форму и закажите обратный звонок</p>
+				<p class="feedback-form_subtitle communication_form-subtitle">Запись по телефону +7 (8152) 707-600</p>
+
+				<div class="communication_form-fields">
+					<div class="communication_form-inputs">
+						<div class="feedback-form_fiel communication_form-field">
+							<p class="feedback-form_caption communication_form-caption">Ваше имя</p>
+							<input type="text" name="name" placeholder="Иван">
+						</div>
+						<div class="feedback-form_field communication_form-field">
+							<p class="feedback-form_caption communication_form-caption">Ваша фамилия</p>
+							<input type="text" name="surname" placeholder="Дендак">
+						</div>
+						<div class="feedback-form_field communication_form-field">
+							<p class="feedback-form_caption communication_form-caption">Ваш номер</p>
+							<input type="tel" name="tel" placeholder="+7 800 555 35 35">
+						</div>
+						<div class="feedback-form_field communication_form-field">
+							<p class="feedback-form_caption communication_form-caption">Комментарий</p>
+							<input type="text" name="comment">
+						</div>
+					</div>
+	
+					<div>
+						<button class="btn communication_btn">Заказать обратный звонок</button>
+						<p class="feedback-form_agreement communication_form-agreement">Нажимая кнопку «Заказать звонок», вы автоматически выражаете
+						<span><a href="">согласие на обработку</a></span>
+							своих персональных данных ООО «Глобал Дент».
+						</p>
 					</div>
 				</div>
-				<div class="stat_block">
-					<i class="icon icon-dog_house"></i>
-					<div class="stat_amount">
-						<span class="stat_number">4,500</span>
-						<span class="stat_what">dogs boarded</span>
+			</form>
+		</div>
+	</section>
+	<section class="doctors">
+		<div class="wrapper">
+			<h3>Наши врачи</h3>
+			<p class="doctors_subtitle">В команду попадает лишь 1 из 5 кандидатов.<br>Нам важно, чтобы врач был хорош не только в
+			работе, но и в общении с людьми.</p>
+			<div class="btn-slider-prev doctors_slider-prev"><span class="icon icon-expand_more"></span></div>
+			<div class="btn-slider-next doctors_slider-next"><span class="icon icon-expand_more"></span></div>
+			<div class="doctors_slider">
+				<div>
+					<div class="doctors_card">
+						<img src="images/doctor-1.png" alt="Фото врача" class="doctors_pic">
+						<div class="doctors_about">
+							<span class="doctors_speciality">Основатель клиники, глав.врач</span>
+							<span class="doctors_name">Мустафин Андрей Олегович</span>
+							<p class="doctors_text">Окончил Смоленскую Государственную Медицинскую Академию в 1997 году. Работая в
+							одиночку, невозможно оказать помощь всем желающим. Поэтому была создана клиника, чтобы предоставлять нашим
+							клиентам полный спектр услуг самого высокого качества! Свободное время уделяю семье, занимаюсь саморазвитием.
+							</p>
+						</div>
 					</div>
 				</div>
-				<div class="stat_block">
-					<i class="icon icon-dog_leash"></i>
-					<div class="stat_amount">
-						<span class="stat_number">2,900</span>
-						<span class="stat_what">pups trained</span>
+				<div>
+					<div class="doctors_card">
+						<img src="images/doctor-2.png" alt="Фото врача" class="doctors_pic">
+						<div class="doctors_about">
+							<span class="doctors_speciality">Врач-стоматолог, терапевт</span>
+							<span class="doctors_name">Зайцева Ирина Александровна</span>
+							<p class="doctors_text">Окончила Беларусский Государственный Медицинский Университет по специальности
+							врач-стоматолог в 2014 году. В работе прежде всего ценю качество и четкость выполнения всех стандартов.
+							Занимаюсь танцами в свободное время.
+							</p>
+						</div>
 					</div>
 				</div>
-				<div class="stat_block">
-					<i class="icon icon-dog_food"></i>
-					<div class="stat_amount">
-						<span class="stat_number">12k+</span>
-						<span class="stat_what">meals served</span>
+				<div>
+					<div class="doctors_card">
+						<img src="images/doctor-1.png" alt="Фото врача" class="doctors_pic">
+						<div class="doctors_about">
+							<span class="doctors_speciality">Врач-стоматолог, терапевт</span>
+							<span class="doctors_name">Иванов Ваня Иванович</span>
+							<p class="doctors_text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam suscipit soluta quas! Incidunt, aspernatur debitis quis odit, consectetur dolores maxime libero explicabo suscipit asperiores temporibus accusamus beatae alias tempora accusantium.
+							</p>
+						</div>
 					</div>
 				</div>
-			</div>
-			<div class="stat_app">
-				<h5>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</h5>
-				<button class="btn stat_btn">
-					<span class="btn_text">Learn More</span>
-					<div class="btn_icon ">
-						<i class="icon icon-arrow_forward"></i>
+				<div>
+					<div class="doctors_card">
+						<img src="images/doctor-2.png" alt="Фото врача" class="doctors_pic">
+						<div class="doctors_about">
+							<span class="doctors_speciality">Врач-стоматолог, терапевт</span>
+							<span class="doctors_name">Иванов Ваня Иванович</span>
+							<p class="doctors_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste molestias ad quis, quasi est commodi nobis veniam magnam vero magni enim officia earum eligendi nesciunt impedit quidem et cupiditate esse.
+							</p>
+						</div>
 					</div>
-				</button>
+				</div>
 			</div>
 		</div>
 	</section>
+
 	<section class="footer wrapper">
 		<div class="footer_logoGroup">
 			<img src="images/Logo-Black.png" alt="Logo">
@@ -674,8 +718,17 @@
 	infinite: false,
 	slidesToShow: 1,
 	slidesToScroll: 1,
-	prevArrow: $(".btn-slider-prev"),
-	nextArrow: $(".btn-slider-next"),
+	prevArrow: $(".caries_slider-prev"),
+	nextArrow: $(".caries_slider-next"),
+	});
+</script>
+<script>
+	$('.doctors_slider').slick({
+		infinite: false,
+		slidesToShow: 2,
+		slidesToScroll: 1,
+		prevArrow: $(".doctors_slider-prev"),
+		nextArrow: $(".doctors_slider-next"),
 	});
 </script>
 <script type="text/javascript">
