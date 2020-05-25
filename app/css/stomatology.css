@@ -274,8 +274,6 @@ h6 {
     background: #02173D; }
   .btn--sm {
     width: 150px; }
-  .btn--mid {
-    width: 184px; }
   .btn--big {
     width: 230px; }
 
@@ -374,6 +372,7 @@ h6 {
   background-color: #0545BA;
   -webkit-box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.1); }
+  background-color: #0545BA; }
   .btn-slider-prev span,
   .btn-slider-next span {
     color: white;
@@ -830,19 +829,6 @@ a {
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between; }
-    .service_form-title {
-      font-family: MullerMedium, sans-serif;
-      font-size: 2.4rem;
-      line-height: 24px;
-      letter-spacing: 0.02em;
-      margin-bottom: 8px; }
-    .service_form-subtitle {
-      font-family: MullerMedium, sans-serif;
-      font-size: 1.6rem;
-      line-height: 19px;
-      letter-spacing: 0.02em;
-      color: rgba(0, 0, 0, 0.6);
-      margin-bottom: 40px; }
     .service_form hr {
       width: 100%;
       height: 1px;
@@ -851,64 +837,86 @@ a {
           -ms-transform: matrix(1, 0, 0, -1, 0, 0);
               transform: matrix(1, 0, 0, -1, 0, 0);
       margin-bottom: 39px; }
-    .service_form input {
-      -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-              box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-      border-radius: 5px;
-      width: 220px;
-      height: 52px;
-      padding-left: 18px; }
-      .service_form input::-webkit-input-placeholder {
-        font-family: Muller;
-        font-size: 1.6rem;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-        color: rgba(0, 0, 0, 0.6); }
-      .service_form input::-moz-placeholder {
-        font-family: Muller;
-        font-size: 1.6rem;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-        color: rgba(0, 0, 0, 0.6); }
-      .service_form input:-ms-input-placeholder {
-        font-family: Muller;
-        font-size: 1.6rem;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-        color: rgba(0, 0, 0, 0.6); }
-      .service_form input::-ms-input-placeholder {
-        font-family: Muller;
-        font-size: 1.6rem;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-        color: rgba(0, 0, 0, 0.6); }
-      .service_form input::placeholder {
-        font-family: Muller;
-        font-size: 1.6rem;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-        color: rgba(0, 0, 0, 0.6); }
     .service_form-field {
       margin-bottom: 20px; }
-    .service_form-caption {
-      font-family: MullerBold, sans-serif;
-      font-size: 1.6rem;
-      line-height: 16px;
-      letter-spacing: 0.02em;
-      margin-bottom: 10px; }
     .service_form-agreement {
-      font-size: 1rem;
-      line-height: 120%;
-      letter-spacing: 0.06em;
-      color: rgba(0, 0, 0, 0.6);
       width: 57%;
       padding-top: 5px;
       margin-top: 50px; }
       .service_form-agreement a {
         color: #0545BA; }
-  .service_btn {
-    width: 184px;
-    margin-top: 50px; }
+    .service_form button {
+      width: 184px;
+      margin-top: 50px; }
+
+.feedback-form_title {
+  font-family: MullerMedium, sans-serif;
+  font-size: 2.4rem;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  margin-bottom: 8px; }
+
+.feedback-form_subtitle {
+  font-family: MullerMedium, sans-serif;
+  font-size: 1.6rem;
+  line-height: 19px;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 40px; }
+
+.feedback-form input {
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 220px;
+  height: 52px;
+  padding-left: 18px; }
+  .feedback-form input::-webkit-input-placeholder {
+    font-family: Muller;
+    font-size: 1.6rem;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.6); }
+  .feedback-form input::-moz-placeholder {
+    font-family: Muller;
+    font-size: 1.6rem;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.6); }
+  .feedback-form input:-ms-input-placeholder {
+    font-family: Muller;
+    font-size: 1.6rem;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.6); }
+  .feedback-form input::-ms-input-placeholder {
+    font-family: Muller;
+    font-size: 1.6rem;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.6); }
+  .feedback-form input::placeholder {
+    font-family: Muller;
+    font-size: 1.6rem;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.6); }
+
+.feedback-form_caption {
+  font-family: MullerBold, sans-serif;
+  font-size: 1.6rem;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  margin-bottom: 10px; }
+
+.feedback-form_agreement {
+  font-size: 1rem;
+  line-height: 120%;
+  letter-spacing: 0.06em;
+  color: rgba(0, 0, 0, 0.6); }
+
+.feedback-form button {
+  width: 184px; }
 
 .caries {
   background: url("../images/caries-bg.jpg") no-repeat;
@@ -1295,6 +1303,7 @@ a {
     margin-bottom: 1.7rem;
     line-height: 120%;
     letter-spacing: 0.02em; }
+    margin-bottom: 18px; }
   .testimonials h3 {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1351,6 +1360,122 @@ a {
     background: url(1.jpg) no-repeat;
     background-position: 0 center;
     background-size: 100vw; }
+.communication {
+  background: url("../images/communication-bg.jpg") no-repeat;
+  background-size: 100% 100%;
+  padding-top: 5.9rem;
+  padding-bottom: 3.6rem; }
+  .communication_form-title {
+    color: #ffffff;
+    text-align: center; }
+  .communication_form-subtitle {
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center; }
+  .communication_form-agreement {
+    color: rgba(255, 255, 255, 0.6);
+    width: 278px;
+    text-align: center; }
+    .communication_form-agreement a {
+      color: white; }
+  .communication_form-fields {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .communication_form-inputs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .communication_form-field {
+    margin-right: 3rem; }
+  .communication_form-caption {
+    color: white; }
+  .communication_form button {
+    width: 278px;
+    color: #0545BA;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 25px;
+    margin-top: 26px; }
+
+.doctors {
+  background: url("../images/doctors-bg.jpg") no-repeat;
+  background-size: 100% 100%;
+  padding-top: 14.9rem;
+  padding-bottom: 8rem; }
+  .doctors .wrapper {
+    position: relative; }
+  .doctors h3,
+  .doctors .doctors_subtitle {
+    text-align: center; }
+  .doctors h3 {
+    margin-bottom: 30px; }
+  .doctors_subtitle {
+    margin-bottom: 49px;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.6); }
+  .doctors_slider-prev, .doctors_slider-next {
+    top: 65%; }
+  .doctors_slider-prev {
+    left: 0px; }
+  .doctors_slider-next {
+    right: 4px; }
+  .doctors_slider {
+    height: 280px; }
+  .doctors_card {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    max-width: 705px;
+    padding: 4rem 3rem 4.5rem 4rem;
+    background: #FFFFFF;
+    border-radius: 5px; }
+  .doctors_about {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .doctors_speciality {
+    font-family: MullerMedium,sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 5px; }
+  .doctors_name {
+    font-family: MullerMedium,sans-serif;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.02em;
+    margin-bottom: 24px; }
+  .doctors_text {
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 120%; }
 
 .footer {
   font-size: 14px;
