@@ -372,7 +372,6 @@ h6 {
   background-color: #0545BA;
   -webkit-box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.1); }
-  background-color: #0545BA; }
   .btn-slider-prev span,
   .btn-slider-next span {
     color: white;
@@ -1303,7 +1302,6 @@ a {
     margin-bottom: 1.7rem;
     line-height: 120%;
     letter-spacing: 0.02em; }
-    margin-bottom: 18px; }
   .testimonials h3 {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -1330,7 +1328,8 @@ a {
 
 .diff_slider-wrap {
   max-width: 1026px;
-  height: 472px; }
+  height: 472px;
+  position: relative; }
 
 .diff_slide {
   width: 100%;
@@ -1341,25 +1340,53 @@ a {
   display: flex;
   background: url("../images/smile-good.jpg") no-repeat;
   background-position: 0 center;
-  background-size: contain;
+  background-size: 100% 100%;
   position: relative; }
+  .diff_slide input {
+    -webkit-appearance: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: none; }
+  .diff_slide input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 32px;
+    height: 100%;
+    background-color: none;
+    background-image: url("../images/diff.png");
+    cursor: pointer; }
 
 .diff .original-image {
   position: absolute;
   left: 0;
-  width: 20%;
+  width: 50%;
   height: 100%;
   background: url("../images/smile-bad.jpg") no-repeat;
   background-position: 0 center;
   background-size: cover; }
-  .diff .original-image .original-image {
-    position: absolute;
-    left: 0;
-    width: 20%;
-    height: 100vh;
-    background: url(1.jpg) no-repeat;
-    background-position: 0 center;
-    background-size: 100vw; }
+
+.diff_dots {
+  height: 25px;
+  width: 210px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .diff_dots li {
+    width: 18px;
+    height: 18px;
+    background-color: transparent;
+    border: 2px solid #0545BA;
+    border-radius: 50%; }
+
 .communication {
   background: url("../images/communication-bg.jpg") no-repeat;
   background-size: 100% 100%;
@@ -1476,93 +1503,5 @@ a {
   .doctors_text {
     color: rgba(0, 0, 0, 0.6);
     line-height: 120%; }
-
-.footer {
-  font-size: 14px;
-  line-height: 22px;
-  letter-spacing: 0.15px;
-  color: rgba(0, 0, 0, 0.6);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-  .footer a {
-    color: rgba(0, 0, 0, 0.6); }
-    .footer a:hover {
-      color: #1853BF; }
-  .footer_title {
-    font-weight: 900;
-    margin-bottom: 28px; }
-  .footer_contact {
-    width: 23.2353%; }
-  .footer_logoGroup {
-    width: 23.2353%; }
-  .footer_text {
-    margin-top: 23px;
-    margin-bottom: 33px; }
-  .footer_social a {
-    font-size: 24px;
-    margin-right: 18px; }
-    .footer_social a:hover i:before {
-      color: #1853BF; }
-  .footer_linkGroup {
-    width: 21.3725%; }
-    .footer_linkGroup li {
-      margin-bottom: 16px; }
-    .footer_linkGroup li:nth-last-of-type {
-      margin-bottom: 0; }
-  .footer_linkWrapper {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .footer_contact li {
-    margin-bottom: 16px; }
-  .footer_contact i {
-    display: inline-block;
-    font-size: 16px;
-    vertical-align: middle;
-    margin-right: 18px; }
-  .footer_contact span {
-    display: inline-block;
-    vertical-align: middle;
-    word-break: break-all; }
-
-footer {
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0.15px;
-  color: #FFFFFF;
-  background-color: #0545BA;
-  height: 60px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  footer a {
-    color: #ffffff;
-    font-weight: 800;
-    padding-left: 10px; }
-    footer a:hover {
-      color: #1853BF; }
-  footer a:nth-of-type(2) {
-    border-left: 2px solid #ffff; }
-  footer a:nth-of-type(1) {
-    padding-right: 10px; }
 
 /*# sourceMappingURL=stomatology.css.map */

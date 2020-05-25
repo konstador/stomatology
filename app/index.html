@@ -599,25 +599,39 @@
 		<p class="diff_subtitle">Посмотрите на то, до какой неузнаваемости<br>
 			преображаются зубы наших пациентов</p>
 		<div class="diff_slider-wrap">
+			<div class="btn-slider-prev diff_slider-prev"><span class="icon icon-expand_more"></span></div>
+			<div class="btn-slider-next diff_slider-next"><span class="icon icon-expand_more"></span></div>
+			<ul class="diff_dots">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
 			<div class="diff_slider">
 				<div>
 					<div class="diff_slide">
 						<div class="original-image"></div>
-						<input type="range" value="20" max="100">
-					</div>
-				</div>
-				<!-- <div>
-					<div class="diff_slide">
-						<div class="original-image"></div>
-						<input type="range" value="20" max="100">
+						<input class="diff_line" type="range" value="50" max="100">
 					</div>
 				</div>
 				<div>
 					<div class="diff_slide">
 						<div class="original-image"></div>
-						<input type="range" value="20" max="100">
+						<input class="diff_line" type="range" value="50" max="100">
 					</div>
-				</div> -->
+				</div>
+				<div>
+					<div class="diff_slide">
+						<div class="original-image"></div>
+						<input class="diff_line" type="range" value="50" max="100">
+					</div>
+				</div>
+				<div>
+					<div class="diff_slide">
+						<div class="original-image"></div>
+						<input class="diff_line" type="range" value="50" max="100">
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -794,6 +808,18 @@
 		slidesToScroll: 1,
 		prevArrow: $(".doctors_slider-prev"),
 		nextArrow: $(".doctors_slider-next"),
+	});
+</script>
+<script>
+	$('.diff_slider').slick({
+		infinite: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		draggable:false,
+		prevArrow: $(".diff_slider-prev"),
+		nextArrow: $(".diff_slider-next"),
+		dots:true,
+		appendDots:$(".diff_dots"),
 	});
 </script>
 <script type="text/javascript">
