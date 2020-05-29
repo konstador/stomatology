@@ -37,7 +37,6 @@ a {
         align-items: center;
         flex-wrap: wrap;
 
-        //height: 100%;
     }
 
     &_inside {
@@ -627,10 +626,6 @@ li.menu_item-1 {
     }
 
     &_subtitle {
-        font-size: 1.8rem;
-        line-height: 120%;
-        letter-spacing: 0.02em;
-        color: rgba(0, 0, 0, 0.6);
         margin-top: 30px;
         margin-bottom: 6rem;
     }
@@ -978,22 +973,34 @@ li.menu_item-1 {
 
 // DIFF SECTION***************************************
 .diff{
+    background: url("../images/diff-bg.jpg") no-repeat;
+    background-size:100% 100%;
+    padding-bottom: 9rem;
+    padding-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
     h2{
         text-align: center;
         margin-bottom: 30px;
     }
     &_subtitle{
         text-align: center;
-        font-size: 1.8rem;
-        line-height: 120%;
-        letter-spacing: 0.02em;
-        color: $gray1;
-        //max-width: 800px;
+        margin-bottom: 30px;
     }
     &_slider-wrap{
         max-width: 1026px;
         height: 472px;
         position: relative;
+        width: 100%;
+        .btn-slider-prev {
+            top: 45%;
+            left: -20%;
+        }
+        .btn-slider-next {
+            top: 45%;
+            right: -20%;
+        }
     }
     &_slide{
         width: 100%;
@@ -1003,7 +1010,7 @@ li.menu_item-1 {
         background-position: 0 center;
         background-size: 100% 100%;
         position: relative;
-        //z-index: 1;
+        
         input {
             -webkit-appearance: none;
             position: absolute;
@@ -1021,7 +1028,6 @@ li.menu_item-1 {
             background-image: url("../images/diff.png");
             cursor: pointer;
         }
-
     }
     .original-image {
         position: absolute;
@@ -1034,24 +1040,12 @@ li.menu_item-1 {
         
     }
     &_dots{
-        //position: absolute;
-        height: 25px;
-        width: 210px;
-        display: flex;
-        justify-content: space-between;
-        align-items:center;
-
-        li{
-            width: 18px;
-            height: 18px;
-            background-color:transparent;
-            border: 2px solid $primary;
-            border-radius:50%;
-        }
+        margin-top: 50px;
+        
     }
 }
 
-// COMMUNICATION SECTION***************************************
+// COMMUNICATION SECTION*******************************
 .communication{
     background: url("../images/communication-bg.jpg") no-repeat;
     background-size: 100% 100%;
@@ -1107,26 +1101,20 @@ li.menu_item-1 {
 //*****DOCTORS SECTION**************************
 .doctors{
     background:url("../images/doctors-bg.jpg") no-repeat;
-    background-size:100% 100%;
+    background-size:contain;
     padding-top: 14.9rem;
-    padding-bottom: 8rem;
     .wrapper{
         position: relative;
     }
-    h3,
+    h2,
     .doctors_subtitle{
         text-align: center;
     }
-    h3{
+    h2{
         margin-bottom: 30px;
     }
     &_subtitle{
         margin-bottom: 49px;
-        font-size: 18px;
-        line-height: 120%;
-        letter-spacing: 0.02em;
-        color:$gray1;
-
     }
     &_slider-prev,
     &_slider-next{
@@ -1140,6 +1128,7 @@ li.menu_item-1 {
     }
     &_slider{
         height: 280px;
+        margin-bottom: 8rem;
     }
     
     &_card{
@@ -1173,6 +1162,82 @@ li.menu_item-1 {
         color:$gray1;
         line-height: 120%;
         
+    }
+}
+
+// COLLECTIVE SECTION *******************
+
+.collective {
+    width: 100%;
+    background:url("../images/collective-bg.jpg") no-repeat;
+    background-size:contain;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+
+    &_text {
+        font-family: "MullerMedium";
+        font-size: 2.4rem;
+        line-height: 2.4rem;
+        letter-spacing: 0.02em;
+        color: #FFFFFF;
+    }
+
+    &_content {
+        padding-top: 29.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20.4rem;
+
+    }
+    &_text{
+        text-align: center;
+    }
+
+
+}
+
+// VIDEO SECTION ************
+
+.videos{
+    padding-top: 152px;
+    margin-top: -8rem;
+    background: url("../images/video-bg.jpg") no-repeat;
+    background-position:top center;
+
+    h3{
+        text-align: center;
+        margin-bottom: 1.7rem;
+    }
+    &_gallery{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 3rem;
+        margin-bottom: 4rem;
+        div{
+            box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+            border-radius: 5px;
+            border:10px solid #ffffff;
+        }
+    }
+    button{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}
+
+.contacts{
+    &_icon {
+        width: 14px;
+        height: 14px;
+        opacity: 0.6;
+
     }
 }
 // FOOTER SECTION********************************

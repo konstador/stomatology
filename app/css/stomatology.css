@@ -247,6 +247,13 @@ h6 {
   font-size: 19px;
   line-height: 26px; }
 
+.subtitle {
+  font-size: 1.8rem;
+  line-height: 120%;
+  letter-spacing: 0.02em;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center; }
+
 .btn {
   height: 52px;
   background: #0545BA;
@@ -399,6 +406,55 @@ h6 {
   background-color: white; }
   .slick-disabled span {
     color: #0545BA; }
+
+/* Dots */
+.slick-dots {
+  height: 32px;
+  width: 210px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .slick-dots li {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .slick-dots li button {
+      border: 2px solid #0545BA;
+      border-radius: 50%;
+      height: 18px;
+      width: 18px;
+      outline: none;
+      line-height: 0px;
+      font-size: 0px;
+      color: transparent;
+      cursor: pointer; }
+      .slick-dots li button:hover, .slick-dots li button:focus {
+        outline: none; }
+    .slick-dots li.slick-active button {
+      height: 32px;
+      width: 32px;
+      border-width: 6px; }
 
 .wrapper {
   max-width: 1470px;
@@ -1033,10 +1089,6 @@ a {
   .stages_title, .stages_subtitle {
     text-align: center; }
   .stages_subtitle {
-    font-size: 1.8rem;
-    line-height: 120%;
-    letter-spacing: 0.02em;
-    color: rgba(0, 0, 0, 0.6);
     margin-top: 30px;
     margin-bottom: 6rem; }
   .stages_list {
@@ -1315,77 +1367,75 @@ a {
   .testimonials_userName {
     vertical-align: middle; }
 
-.diff h2 {
-  text-align: center;
-  margin-bottom: 30px; }
-
-.diff_subtitle {
-  text-align: center;
-  font-size: 1.8rem;
-  line-height: 120%;
-  letter-spacing: 0.02em;
-  color: rgba(0, 0, 0, 0.6); }
-
-.diff_slider-wrap {
-  max-width: 1026px;
-  height: 472px;
-  position: relative; }
-
-.diff_slide {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  background: url("../images/smile-good.jpg") no-repeat;
-  background-position: 0 center;
+.diff {
+  background: url("../images/diff-bg.jpg") no-repeat;
   background-size: 100% 100%;
-  position: relative; }
-  .diff_slide input {
-    -webkit-appearance: none;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: none; }
-  .diff_slide input::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 32px;
-    height: 100%;
-    background-color: none;
-    background-image: url("../images/diff.png");
-    cursor: pointer; }
-
-.diff .original-image {
-  position: absolute;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: url("../images/smile-bad.jpg") no-repeat;
-  background-position: 0 center;
-  background-size: cover; }
-
-.diff_dots {
-  height: 25px;
-  width: 210px;
+  padding-bottom: 9rem;
+  padding-top: 8rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  .diff_dots li {
-    width: 18px;
-    height: 18px;
-    background-color: transparent;
-    border: 2px solid #0545BA;
-    border-radius: 50%; }
+  .diff h2 {
+    text-align: center;
+    margin-bottom: 30px; }
+  .diff_subtitle {
+    text-align: center;
+    margin-bottom: 30px; }
+  .diff_slider-wrap {
+    max-width: 1026px;
+    height: 472px;
+    position: relative;
+    width: 100%; }
+    .diff_slider-wrap .btn-slider-prev {
+      top: 45%;
+      left: -20%; }
+    .diff_slider-wrap .btn-slider-next {
+      top: 45%;
+      right: -20%; }
+  .diff_slide {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    background: url("../images/smile-good.jpg") no-repeat;
+    background-position: 0 center;
+    background-size: 100% 100%;
+    position: relative; }
+    .diff_slide input {
+      -webkit-appearance: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: none; }
+    .diff_slide input::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 32px;
+      height: 100%;
+      background-color: none;
+      background-image: url("../images/diff.png");
+      cursor: pointer; }
+  .diff .original-image {
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: url("../images/smile-bad.jpg") no-repeat;
+    background-position: 0 center;
+    background-size: cover; }
+  .diff_dots {
+    margin-top: 50px; }
 
 .communication {
   background: url("../images/communication-bg.jpg") no-repeat;
@@ -1440,22 +1490,17 @@ a {
 
 .doctors {
   background: url("../images/doctors-bg.jpg") no-repeat;
-  background-size: 100% 100%;
-  padding-top: 14.9rem;
-  padding-bottom: 8rem; }
+  background-size: contain;
+  padding-top: 14.9rem; }
   .doctors .wrapper {
     position: relative; }
-  .doctors h3,
+  .doctors h2,
   .doctors .doctors_subtitle {
     text-align: center; }
-  .doctors h3 {
+  .doctors h2 {
     margin-bottom: 30px; }
   .doctors_subtitle {
-    margin-bottom: 49px;
-    font-size: 18px;
-    line-height: 120%;
-    letter-spacing: 0.02em;
-    color: rgba(0, 0, 0, 0.6); }
+    margin-bottom: 49px; }
   .doctors_slider-prev, .doctors_slider-next {
     top: 65%; }
   .doctors_slider-prev {
@@ -1463,7 +1508,8 @@ a {
   .doctors_slider-next {
     right: 4px; }
   .doctors_slider {
-    height: 280px; }
+    height: 280px;
+    margin-bottom: 8rem; }
   .doctors_card {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1503,5 +1549,71 @@ a {
   .doctors_text {
     color: rgba(0, 0, 0, 0.6);
     line-height: 120%; }
+
+.collective {
+  width: 100%;
+  background: url("../images/collective-bg.jpg") no-repeat;
+  background-size: contain; }
+  .collective .wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+  .collective_text {
+    font-family: "MullerMedium";
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.02em;
+    color: #FFFFFF; }
+  .collective_content {
+    padding-top: 29.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20.4rem; }
+  .collective_text {
+    text-align: center; }
+
+.videos {
+  padding-top: 152px;
+  margin-top: -8rem;
+  background: url("../images/video-bg.jpg") no-repeat;
+  background-position: top center; }
+  .videos h3 {
+    text-align: center;
+    margin-bottom: 1.7rem; }
+  .videos_gallery {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    margin-top: 3rem;
+    margin-bottom: 4rem; }
+    .videos_gallery div {
+      -webkit-box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+              box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+      border-radius: 5px;
+      border: 10px solid #ffffff; }
+  .videos button {
+    margin-left: auto;
+    margin-right: auto; }
+
+.contacts_icon {
+  width: 14px;
+  height: 14px;
+  opacity: 0.6; }
 
 /*# sourceMappingURL=stomatology.css.map */

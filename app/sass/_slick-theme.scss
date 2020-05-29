@@ -1,3 +1,4 @@
+// *** Arrows ***
 .btn-slider-prev,
 .btn-slider-next {
     cursor: pointer;
@@ -36,5 +37,47 @@
     background-color: white;
     span {
         color:$primary;
+    }
+}
+
+/* Dots */
+
+.slick-dots {
+    height: 32px;
+    width: 210px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+
+    li {
+        width: 32px;
+        height: 32px;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+        button {
+            border: 2px solid $primary;
+            border-radius: 50%;
+            height: 18px;
+            width: 18px;
+            outline: none;
+            line-height: 0px;
+            font-size: 0px;
+            color: transparent;
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                outline: none;
+            }
+        }
+
+        &.slick-active button {
+            height: 32px;
+            width: 32px;
+            border-width: 6px;
+        }
     }
 }
