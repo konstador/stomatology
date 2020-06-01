@@ -23,6 +23,8 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-uglifyjs": "^0.6.2",
     "imagemin-pngquant": "^7.0.0",
+    "jquery-scrollify": "^1.0.20",
+    "rfs": "^9.0.3",
     "smart-grid": "^2.1.2"
   }
 }

@@ -115,7 +115,7 @@
 					</button>
 				</div>
 				<div class="advantages-wrapper">
-					<div class="advantages">
+					<div class="advantages" data-section-name="advantages">
 						<div class="advantages_item">
 							<img src="images/tools-icon.png" alt="Иконка" class="advantages_icon">
 							<div class="advantages_description">
@@ -154,7 +154,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="service">
+	<section class="service scroll" dats-section-name="service">
 		<div class="service_about">
 			<h2 class="service_title">Лечение кариеса</h2>
 			<p class="service_discription">Каждый зуб мы лечим по мировым стандартам под микроскопом.Все наши терапевты -
@@ -191,7 +191,7 @@
 			</div>
 		</div>
 		<div class="service_feedback">
-			<div class="service_price">
+			<div class="service_price" data-section-name="price">
 				<p>Цена от 2 990 рублей</p>
 				<p>Предварительная стоимость</p>
 			</div>
@@ -423,7 +423,7 @@
 			</li>
 			<li>
 				<span class="stages_point"></span>
-				<span></span>
+				<span class="stages_line"></span>
 				<div class="stages_item">
 				<h4>
 					Изоляция
@@ -453,7 +453,7 @@
 			</li>
 			<li>
 				<span class="stages_point"></span>
-				<span></span>
+				<span class="stages_line"></span>
 				<div class="stages_item">
 					<h4>
 						Протравка кислотой
@@ -522,7 +522,7 @@
 		</ol>
 	</section>
 	
-	<section class="testimonials">
+	<section class="testimonials" data-section-name="testimonials">
 		<h4>Отзывы наших пациентов</h4>
 		<div class="btn-slider-prev testimonials_btn-prev"><span class="icon icon-expand_more"></span></div>
 		<div class="btn-slider-next testimonials_btn-next"><span class="icon icon-expand_more"></span></div>
@@ -644,25 +644,25 @@
 			<div>
 				<div class="diff_slider">
 					<div>
-						<div class="diff_slide">
+						<div class="diff_slide diff_slide-1">
 							<div class="original-image"></div>
 							<input class="diff_line" type="range" value="50" max="100">
 						</div>
 					</div>
 					<div>
-						<div class="diff_slide">
+						<div class="diff_slide diff_slide-2">
 							<div class="original-image"></div>
 							<input class="diff_line" type="range" value="50" max="100">
 						</div>
 					</div>
 					<div>
-						<div class="diff_slide">
+						<div class="diff_slide diff_slide-3">
 							<div class="original-image"></div>
 							<input class="diff_line" type="range" value="50" max="100">
 						</div>
 					</div>
 					<div>
-						<div class="diff_slide">
+						<div class="diff_slide diff_slide-4">
 							<div class="original-image"></div>
 							<input class="diff_line" type="range" value="50" max="100">
 						</div>
@@ -712,7 +712,7 @@
 			</form>
 		</div>
 	</section>
-	<section class="doctors">
+	<section class="doctors" data-section-name="doctors">
 		<div class="wrapper doctors_wrapper">
 			<h2>Наши врачи</h2>
 			<p class="doctors_subtitle subtitle">В команду попадает лишь 1 из 5 кандидатов.<br>Нам важно, чтобы врач был хорош не только в
@@ -834,7 +834,7 @@
 			<button class="btn btn--big">Смотреть все видео</button>
 		</div>
 	</section>
-	<section class="contacts">
+	<section class="contacts" data-section-name="contacts">
 		<h2>Наши контакты</h2>
 		<div class="wrapper">
 			<div class="contacts_data">
@@ -879,10 +879,10 @@
 				</div>
 			</div>
 			<div class="contacts_map">
-				<iframe
+				<!-- <iframe
 					src="https://yandex.ru/map-widget/v1/?um=constructor%3Af02261f5cef0d79833672997ac87d3e324f31e13f47e3a9f75df7bc14d4bc74a&amp;source=constructor"
 					width="100%" height="440" frameborder="0">
-				</iframe>
+				</iframe> -->
 			</div>
 		</div>
 	</section>
@@ -895,10 +895,7 @@
 			<input type="mail" name="mail" placeholder="Ваш e-mail">
 			<button class="btn btn--sm">Подписаться</button>
 		</form>
-		
 	</section>
-	
-
 	<section class="footer">
 		<div class="wrapper">
 			<div class="footer_linkGroup-1">
@@ -907,22 +904,22 @@
 				</div>
 				<ul class="footer_linkList-1 linkList">
 					<li>
-						<a href="|">Об услуге</a>
+						<a href="#service" class="list-item-1">Об услуге</a>
 					</li>
 					 <li>
-						<a href="|">Цены</a>
+						<a id="price">Цены</a>
 					</li>
 					 <li>
-						<a href="|">Преимущества</a>
+						<a id="advantages">Преимущества</a>
 					</li>
 					 <li>
-						<a href="|">Наши врачи</a>
+						<a id="doctors">Наши врачи</a>
 					</li>
 					 <li>
-						<a href="|">Отзывы</a>
+						<a id="testimonials">Отзывы</a>
 					</li>
 					 <li>
-						<a href="|">Контакты</a>
+						<a id="contacts">Контакты</a>
 					</li>
 				</ul>
 				<div class="footer_reg">
@@ -952,6 +949,7 @@
 	
 <script src="js/libs.min.js"></script>
 <script src="slick/slick.js"></script>
+<script src="js/jquery-scrollify/jquery.scrollify.js"></script>
 <script>
 	$('.caries_slider').slick({
 	infinite: false,
@@ -968,6 +966,26 @@
 		slidesToScroll: 3,
 		prevArrow: $(".testimonials_btn-prev"),
 		nextArrow: $(".testimonials_btn-next"),
+		 responsive: [
+		 {
+		 breakpoint: 1600,
+		 settings: {
+		 slidesToScroll: 2,
+		 slidesToShow: 2,
+		 //centerMode:true;
+		 }
+		 },
+		 {
+		 breakpoint: 0,
+		 settings: {
+		 arrows: false,
+		 centerMode: true,
+		 centerPadding: '40px',
+		 slidesToShow: 1
+		 }
+		 }
+		 ]
+
 	});
 </script>
 <script>
@@ -998,10 +1016,30 @@
 	});
 </script>
 <script>
-	document.querySelector(".diff_slide input").addEventListener("input", function () {
-		document.querySelector(".original-image").style.width = this.value + "%";
+	document.querySelector(".diff_slide-1 input").addEventListener("input", function () {
+		document.querySelector(".diff_slide-1 .original-image").style.width = this.value + "%";
+	});
+	document.querySelector(".diff_slide-2 input").addEventListener("input", function () {
+	document.querySelector(".diff_slide-2 .original-image").style.width = this.value + "%";
+	});
+	document.querySelector(".diff_slide-3 input").addEventListener("input", function () {
+	document.querySelector(".diff_slide-3 .original-image").style.width = this.value + "%";
+	});
+	document.querySelector(".diff_slide-4 input").addEventListener("input", function () {
+	document.querySelector(".diff_slide-4 .original-image").style.width = this.value + "%";
 	});
 </script>
+<script>
+	//  $(function() {
+	//  $.scrollify({
+	//  section : ".scroll",
+	//  });
+	//  });
+	$(".list-item-1").on("click",function() {
+	$.scrollify.move($(this).attr("href"));
+	});
+</script>
+
 </body>
 
 </html>
