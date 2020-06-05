@@ -48,59 +48,63 @@
 	<section class="header">
 		<div class="header_top">
 			<div class="wrapper">
-				<div class="header_logo">
-					<img src="images/logo-blue-desktop.png"></img>
+				<div class="wrapper_left">
+					<div class="header_logo">
+						<img src="images/logo-blue-desktop.png"></img>
+					</div>
+					<div class="header_nav">
+						<nav class="menu header_menu">
+							<div class="menu_toggle"></div>
+							<ul class="menu_list">
+								<li class="menu_item-1">
+									<a href="#" class="menu_link-1">Услуги
+										<span class="icon icon-expand_more"></span>
+									</a>
+									<ul class="menu_drop-1">
+										<li>
+											<a href="#">Ортодонтия </a></li>
+										<li>
+											<a href="#">Отбеливание</a>
+										</li>
+										<li>
+											<a href="#">Хирургия</a>
+										</li>
+										<li>
+											<a href="#">Имплантация</a>
+										</li>
+										<li>
+											<a href="#">Гигиена</a>
+										</li>
+										<li>
+											<a href="#">Протезирование</a>
+										</li>
+										<li>
+											<a href="#">Полный прайс-лист</a>
+										</li>
+	
+									</ul>
+								</li>
+	
+								<li><a href="#" class="menu_link-2">Акции </a></li>
+								<li><a href="#" class="menu_link-3">Врачи</a></li>
+								<li><a href="#" class="menu_link-4">Отзывы</a></li>
+								<li><a href="#" class="menu_link-4">О нас</a></li>
+								<li><a href="#" class="menu_link-5">Контакты</a></li>
+								<li class="last"><a href="#" class="menu_link-7">Документы</a></li>
+							</ul>
+						</nav>
+	
+					</div>
 				</div>
-				<div class="header_nav">
-					<nav class="menu header_menu">
-						<div class="menu_toggle"></div>
-						<ul class="menu_list">
-							<li class="menu_item-1">
-								<a href="#" class="menu_link-1">Услуги
-									<span class="icon icon-expand_more"></span>
-								</a>
-								<ul class="menu_drop-1">
-									<li>
-										<a href="#">Ортодонтия </a></li>
-									<li>
-										<a href="#">Отбеливание</a>
-									</li>
-									<li>
-										<a href="#">Хирургия</a>
-									</li>
-									<li>
-										<a href="#">Имплантация</a>
-									</li>
-									<li>
-										<a href="#">Гигиена</a>
-									</li>
-									<li>
-										<a href="#">Протезирование</a>
-									</li>
-									<li>
-										<a href="#">Полный прайс-лист</a>
-									</li>
-
-								</ul>
-							</li>
-
-							<li><a href="#" class="menu_link-2">Акции </a></li>
-							<li><a href="#" class="menu_link-3">Врачи</a></li>
-							<li><a href="#" class="menu_link-4">Отзывы</a></li>
-							<li><a href="#" class="menu_link-4">О нас</a></li>
-							<li><a href="#" class="menu_link-5">Контакты</a></li>
-							<li class="last"><a href="#" class="menu_link-7">Документы</a></li>
-						</ul>
-					</nav>
-
+				<div class="wrapper_right">
+					<div class="header_contact contact">
+						<a href="+7 (8152) 707-600" class="header_phone contact_phone">+7 (8152) 707-600</a>
+						<p class="header_adress contact_adress">Мурманск, пр. Связи, 12</p>
+					</div>
+					<button class="btn--sm  header_top-btn btn">
+						Записаться
+					</button>
 				</div>
-				<div class="header_contact contact">
-					<a href="+7 (8152) 707-600" class="header_phone contact_phone">+7 (8152) 707-600</a>
-					<p class="header_adress contact_adress">Мурманск, пр. Связи, 12</p>
-				</div>
-				<button class="btn--sm  header_top-btn btn">
-					Записаться
-				</button>
 			</div>
 			
 		</div>
@@ -995,6 +999,16 @@
 		slidesToScroll: 1,
 		prevArrow: $(".doctors_slider-prev"),
 		nextArrow: $(".doctors_slider-next"),
+		responsive: [
+		{
+			breakpoint: 1470,
+			settings: {
+			slidesToScroll: 1,
+			slidesToShow: 1,
+			}
+		}
+		]
+		
 	});
 </script>
 <script>
