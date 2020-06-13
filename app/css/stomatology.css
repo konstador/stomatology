@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v4.0 | 20180602
    License: none (public domain)
@@ -570,6 +571,9 @@ a {
         -ms-flex-pack: justify;
             justify-content: space-between;
     margin-right: 30px; }
+    @media (max-width: 670px) {
+      .header_nav {
+        height: 0px; } }
   .header_title {
     margin-bottom: 29px;
     font-size: -webkit-calc(1.845rem + 4.4625vw);
@@ -599,6 +603,9 @@ a {
     margin-left: 40px; }
   .header_logo {
     margin-right: 80px; }
+  @media (max-width: 670px) {
+    .header_contact {
+      display: none; } }
 
 @media (max-width: 1300px) {
   .header_btn {
@@ -656,6 +663,19 @@ a {
           -ms-flex-pack: start;
               justify-content: flex-start; } }
 
+@media (max-width: 670px) {
+  .header .wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: relative; }
+  .header .wrapper_left {
+    width: auto; }
+  .header_logo {
+    margin-left: 95px; } }
+
 .advantages {
   display: -webkit-box;
   display: -webkit-flex;
@@ -690,15 +710,15 @@ a {
     margin-right: 15px;
     width: -webkit-calc(25% - 30px);
     width: calc(25% - 30px); }
-    @media (max-width: 1470px) {
-      .advantages_item {
-        width: -webkit-calc(50% - 30px);
-        width: calc(50% - 30px); } }
   .advantages_title {
     font-family: "MullerMedium", "sans-serif";
-    font-size: 2.4rem;
     line-height: 2.4rem;
-    letter-spacing: 0.02em; }
+    letter-spacing: 0.02em;
+    font-size: -webkit-calc(1.365rem + 0.8625vw);
+    font-size: calc(1.365rem + 0.8625vw); }
+    @media (min-width: 1200px) {
+      .advantages_title {
+        font-size: 2.4rem; } }
   .advantages_text {
     font-family: "MullerMedium", sans-serif;
     font-size: 1.4rem;
@@ -713,6 +733,25 @@ a {
   -webkit-box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
           box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
   border-radius: 5px; }
+
+@media (max-width: 1470px) {
+  .advantages {
+    height: 200px; }
+    .advantages_item {
+      width: -webkit-calc(50% - 30px);
+      width: calc(50% - 30px); } }
+
+@media (max-width: 1300px) {
+  .advantages_description {
+    width: 100%;
+    margin-left: 20px; } }
+
+@media (max-width: 880px) {
+  .advantages {
+    height: auto; }
+    .advantages_item {
+      width: 100%;
+      margin-bottom: 25px; } }
 
 /********MENU BLOCK****************/
 .menu_list {
@@ -730,7 +769,7 @@ a {
           align-items: center;
   height: 40px;
   width: 630px; }
-  @media screen and (max-width: 576px) {
+  @media (max-width: 670px) {
     .menu_list {
       display: none;
       position: relative; } }
@@ -752,25 +791,24 @@ a {
     opacity: 1; }
 
 .menu_toggle {
-  background-color: #2aacc8;
+  background-color: #0545BA;
   display: none;
+  border-radius: 5px;
   height: 40px;
   width: 65px;
   color: #fff;
   font-size: 1.4rem;
-  font-weight: 400;
   line-height: 20px;
-  text-transform: uppercase;
-  padding: 12px 11px;
+  padding: 11px 10px;
   cursor: pointer; }
   .menu_toggle:before {
-    content: 'Menu'; }
-  @media screen and (max-width: 576px) {
+    content: 'МЕНЮ'; }
+  @media (max-width: 670px) {
     .menu_toggle {
       display: block;
       position: absolute;
-      left: 82%;
-      top: 6%; } }
+      left: 15px;
+      top: 0%; } }
 
 .menu .last {
   margin-right: 0px; }
@@ -1082,7 +1120,7 @@ a {
 
 @media (max-width: 1440px) {
   .service {
-    height: 1000px;
+    height: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -1162,9 +1200,17 @@ a {
     .service_form input {
       width: 100%; } }
 
+@media (max-width: 880px) {
+  .service {
+    padding-top: 100px; }
+    .service_title, .service_discription, .service_subtitle {
+      margin-bottom: 25px; } }
+
 .caries {
   background: url("../images/caries-bg.jpg") no-repeat;
-  padding: 80px 0; }
+  background-size: 100% 100%;
+  padding-top: 80px;
+  padding-bottom: 80px; }
   .caries .wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1187,9 +1233,20 @@ a {
             box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
     border-radius: 5px;
     width: 66%;
-    padding: 100px 10px 11px 145px;
+    padding-top: -webkit-calc(2.125rem + 6.5625vw);
+    padding-top: calc(2.125rem + 6.5625vw);
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: -webkit-calc(2.575rem + 9.9375vw);
+    padding-left: calc(2.575rem + 9.9375vw);
     margin-left: -50px;
     z-index: 1; }
+    @media (min-width: 1200px) {
+      .caries_questions {
+        padding-top: 10rem; } }
+    @media (min-width: 1200px) {
+      .caries_questions {
+        padding-left: 14.5rem; } }
     .caries_questions h3 {
       margin-left: 25px;
       margin-bottom: 23px; }
@@ -1271,7 +1328,43 @@ a {
       max-height: 0;
       overflow: hidden; }
 
+@media (max-width: 1300px) {
+  .accordion_text p {
+    width: 95%; } }
+
+@media (max-width: 970px) {
+  .accordion {
+    height: auto;
+    overflow-y: auto; } }
+
+@media (max-width: 970px) {
+  .caries .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .caries_img {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px; }
+  .caries_btn-prev {
+    left: -0px; }
+  .caries_btn-next {
+    right: -0px; }
+  .caries_questions {
+    margin-top: 23px;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 0;
+    padding-top: 40px;
+    width: auto; } }
+
 .stages {
+  background: url(../images/stages-bg.jpg) no-repeat;
+  background-size: contain;
   max-width: 1140px;
   margin: 0 auto;
   margin-bottom: 140px; }
