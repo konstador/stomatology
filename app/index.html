@@ -43,18 +43,21 @@
 				<path
 					d="m368 394.667969c-4.097656 0-8.191406-1.558594-11.308594-4.695313l-112-112c-3.007812-3.007812-4.691406-7.082031-4.691406-11.304687v-149.335938c0-8.832031 7.167969-16 16-16s16 7.167969 16 16v142.699219l107.308594 107.308594c6.25 6.25 6.25 16.382812 0 22.632812-3.117188 3.136719-7.210938 4.695313-11.308594 4.695313zm0 0" />
 			</symbol>
-		</svg>
-	</div>
+		</svg> </div>
+		
 	<section class="header">
 		<div class="header_top">
 			<div class="wrapper">
 				<div class="wrapper_left">
 					<div class="header_logo">
-						<img src="images/logo-blue-desktop.png"></img>
+						<!-- <img src="images/logo-blue-desktop.png"></img> -->
 					</div>
 					<div class="header_nav">
 						<nav class="menu header_menu">
-							<div class="menu_toggle"></div>
+							<button class="menu_toggle">
+								<img src="images/burger.png" alt="Кнопка меню">
+								</svg>
+							</button>
 							<ul class="menu_list">
 								<li class="menu_item-1">
 									<a href="#" class="menu_link-1">Услуги
@@ -111,6 +114,10 @@
 		<div class="header_inside">
 			<div class="wrapper">
 				<div class="header_content">
+					<div class="header_contact-mobile contact">
+						<a href="+7 (8152) 707-600" class="header_phone contact_phone">+7 (8152) 707-600</a>
+						<p class="header_adress contact_adress">Мурманск, пр. Связи, 12</p>
+					</div>
 					<h1 class="header_title">Терапия и диагностика
 					</h1>
 					<p class="header_text">Кариеса, пульпита и периодонтита</p>
@@ -980,11 +987,9 @@
 		 }
 		 },
 		 {
-		 breakpoint: 0,
+		 breakpoint: 750,
 		 settings: {
-		 arrows: false,
-		 centerMode: true,
-		 centerPadding: '40px',
+		 slidesToScroll: 1,
 		 slidesToShow: 1
 		 }
 		 }

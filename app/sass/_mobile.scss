@@ -1,0 +1,96 @@
+@media(max-width:320px){
+    body {
+        max-width: 320px;
+    }
+
+    .contact {
+        text-align: center;
+
+        &_phone {
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+        }
+
+        &_adress {
+            font-size: 1rem;
+            line-height: 1rem;
+        }
+    }
+    .header {
+        .wrapper {
+            &_left {
+                display: flex;
+                align-items: center;
+            }
+
+            &_right {
+                display: flex;
+                align-items: center;
+            }
+
+        }
+
+        &_inside {
+            background: url("../images/header-bg.jpg") no-repeat;
+            //background-size: contain;
+        }
+
+        &_top {
+            box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+            height: 116px;
+            background: #FFFFFF;
+            padding-top: 30px;
+        }
+
+        &_nav {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 30px;
+
+            @media(max-width: 670px) {
+                height: 0px;
+            }
+        }
+
+        &_title {
+            font-size:2.4rem;
+            line-height: 21px;
+        }
+
+        &_text {
+            
+
+        }
+
+        &_content {
+            width: 100%;
+            padding-top: 20px;
+        }
+
+
+        &_btn {
+            
+        }
+
+        &_top-btn {
+            width: 100px;
+            margin-left: 0;
+        }
+
+        &_logo {
+            margin-right: 56px;
+            margin-left: 65px;
+            background: url("../images/logo-blue-mobile.png") no-repeat;
+            width: 80px;
+            height: 27px;
+        }
+
+        &_contact-mobile {
+           display: block;
+           font-size: 1.4rem ;
+        }
+
+    }
+}

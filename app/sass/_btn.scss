@@ -22,9 +22,11 @@
     &--big {
         width: 230px;
     }
-
-
-   
-
-   
+}
+@media(max-width:320px){
+    .btn{
+        height: 32px;
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
 }
