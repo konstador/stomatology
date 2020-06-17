@@ -15,6 +15,7 @@ html {
 
 body {
     max-width: 1920px;
+    min-width:320px;
     margin: 0 auto;
     position: relative;
     background-color: #ffffff;
@@ -116,7 +117,7 @@ a {
     }
 
     &_top-btn {
-        margin-left: 40px;
+        margin-left: 35px;
     }
     &_logo{
         margin-right: 80px;
@@ -210,6 +211,23 @@ a {
             margin-left: 95px;
         }
 
+    }
+
+}
+@media(max-width:500px) {
+    .header {
+        .wrapper {
+            flex-direction: row;
+            position: relative;
+        }
+
+        .wrapper_left {
+            width: auto;
+        }
+
+        &_logo {
+            margin-left: 35px;
+        }
     }
 
 }
@@ -605,6 +623,7 @@ svg#menu {
         letter-spacing: 0.02em;
         color: rgba(0, 0, 0, 0.6);
         margin-bottom: 40px;
+        align-self:center;
     }
 
     input {
@@ -725,9 +744,27 @@ svg#menu {
         }
     }
 }
-@media(max-width:880px) {
+@media(max-width:630px) {
     .service {
-        
+        &_form {
+            &-agreement {
+                width: 100%;
+                margin-top: 0px;
+            }
+
+            button {
+                align-self: center;
+                margin-top: 0px;
+            }
+
+            &-field {
+                width: 100%;
+            }
+
+            input {
+                width: 100%;
+            }
+        }
     }
 
 }
@@ -906,7 +943,7 @@ svg#menu {
     background-size:contain;
     max-width: 1140px;
     margin: 0 auto;
-    margin-bottom: 140px;
+    @include margin-bottom(140px);
 
     &_title,
     &_subtitle {
@@ -1531,7 +1568,6 @@ svg#menu {
         &-inputs {
             display: flex;
             flex-wrap: wrap;
-
         }
 
         &-field {
@@ -1653,6 +1689,9 @@ svg#menu {
         padding: 4rem 3rem 4.5rem 4rem;
         background: #FFFFFF;
         border-radius: 5px;
+        @media(max-width: 550px){
+            flex-direction: column;
+        }
     }
 
     &_about {
@@ -1695,21 +1734,51 @@ svg#menu {
         }
     }
 }
+@media(max-width:550px) {
+    .doctors{
+        &_pic{
+            width: 85px;
+            margin-bottom: 2rem;
+        }
+        &_card {
+            flex-direction: column;
+            padding: 4rem 1.2rem 4rem 1.2rem;
+        }
+        &_speciality {
+            font-size: 1.2rem;
+            line-height: 120%;
+            margin-bottom: 2rem;
+        }
+
+        &_name {
+            font-size: 1.8rem;
+            line-height: 18px;
+            margin-left: 2rem;
+        }
+
+        &_text {
+            font-size: 1.0rem;
+            line-height: 120%;
+            text-align: center;
+        }
+         &_about {
+             align-items:center;
+         }
+    }
+}
 
 // COLLECTIVE SECTION *******************
 
 .collective {
     width: 100%;
     background: url("../images/collective-bg.jpg") no-repeat;
-    background-position:center center;
+    background-position:top center;
     background-size: contain;
-    position: relative;
-
-    .wrapper {
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: center;
-        // flex-wrap: wrap;
+    height: 38.8vw;
+    max-height: 745px;
+    @media(max-width:1000px){
+        background-size: cover;
+          background-position:center center;
     }
 
     &_text {
@@ -1724,17 +1793,15 @@ svg#menu {
         display: flex;
         justify-content: center;
         align-items:center;
-        max-height:644px;
-        @include padding-top(30.1rem);
-        @include padding-bottom(29.5rem);
+        height: 33.5vw;
+        max-height: 644px;
     }
 
     &_text {
         text-align: center;
     }
     .advantages-wrapper{
-        position: absolute;
-        top: 75%;
+        margin-top: -80px;
     }
 }
 
@@ -1775,9 +1842,13 @@ svg#menu {
     }
 }
 
+//CONTACTS SECTION ***********************
+
 .contacts {
-    padding-top: 15rem;
-    padding-bottom: 6rem;
+    @include padding-top(15rem);
+    @include padding-top(6rem);
+    // padding-top: 15rem;
+    // padding-bottom: 6rem;
 
     h2 {
         text-align: center;
@@ -1807,7 +1878,6 @@ svg#menu {
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         margin-bottom: 22px;
-
         a {
             color: $primary;
         }
@@ -1842,6 +1912,54 @@ svg#menu {
 
 }
 
+@media(max-width:800px){
+    .contacts{
+        &_item {
+            height: 100px;
+            justify-content: center;
+            &:nth-of-type(1){
+                flex-wrap: wrap;
+                box-shadow:0px 0px 0px;
+                height: auto;
+            }
+
+        }
+        &_openMap{
+            display: none;
+        }
+        &_phone,
+        &_email{
+            width: 100%;
+            height: 100px;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+         &_phone{
+             margin-bottom: 22px;
+         }
+    }
+}
+@media(max-width:620px) {
+    .contacts {
+        .wrapper {
+            flex-direction: column;
+        }
+        &_map {
+            height: 390px;
+            width: 100%;
+            border-radius: 0px;
+        }
+        &_data {
+            width: 100%;
+            margin-right: 00px;
+        }
+    }
+}
+
 // NEWS SECTION *******************************
 .news {
     display: flex;
@@ -1849,10 +1967,11 @@ svg#menu {
     align-items: center;
     justify-content: center;
     background: #F3F6FC;
-    padding: 7.6rem 0;
+    padding: 7.6rem 15px;
 
     &_form {
         display: flex;
+        flex-wrap: wrap;
 
         input {
             width: 220px;
@@ -1878,7 +1997,7 @@ svg#menu {
 // FOOTER SECTION********************************
 .footer {
     background-color: #02173D;
-    padding: 10rem 0;
+    @include padding(10rem 0);
 
     &_logo{
         margin-right: 80px;
@@ -1910,10 +2029,6 @@ svg#menu {
     ul {
         display: flex;
 
-        li {
-            margin-right: 2rem;
-        }
-
         a {
             font-family: MullerMedium;
             font-size: 1.6rem;
@@ -1939,7 +2054,14 @@ svg#menu {
         margin-bottom: 6rem;
     }
     &_linkList-1{
-        //margin-left: 80px;
+        li{
+            margin-right: 2rem;
+        }
+    }
+    &_linkList-2 {
+        li {
+            margin-right: 2rem;
+        }
     }
 
     &_cuption {
@@ -1991,7 +2113,7 @@ svg#menu {
     .footer {
         &_linkGroup-1{
             flex-direction: column;
-            //height: 60px;
+
         }
         &_logo{
             margin-right: 0;
@@ -2008,7 +2130,6 @@ svg#menu {
         }
         &_linkGroup-2 {
             flex-direction: column;
-            //height: 60px;
         }
         &_linkList-2 {
             margin-bottom: 50px;
@@ -2019,6 +2140,88 @@ svg#menu {
         }
         &_creators{
             font-size: 1.2rem;
+        }
+    }
+}
+
+@media(max-width:800px) {
+    .footer {
+        &_linkList-2 {
+              height: auto;
+              //justify-content: center;
+
+              li {
+                  //width: 25%;
+                  display: block;
+                  margin-bottom: 2.5rem;
+
+                  @media(max-width: 400px) {
+                      width: 50%;
+                      flex-shrink: 0;
+                      margin-right: 0;
+                      &:nth-of-type(3),
+                      &:nth-of-type(6),
+                      &:nth-of-type(2),
+                      &:nth-of-type(5) {
+                          text-align: left;
+                      }
+                  }
+              }
+          }
+
+    }
+}
+
+@media(max-width:650px) {
+    .footer {
+        &_contact {
+            display: none;
+        }
+
+        &_linkGroup-1 {
+            flex-direction: row;
+            justify-content: stretch;
+        }
+
+        &_logo {
+            width: 50%;
+            margin-bottom: 3rem;
+        }
+
+        &_linkList-1 {
+            order: 2;
+            width: 100%;
+            flex-wrap: wrap;
+            height: auto;
+
+            li {
+                width: 25%;
+                display: block;
+                margin-bottom: 2.5rem;
+                text-align: left;
+
+                @media(max-width: 400px) {
+                    width: 50%;
+                    margin-right:0 ;
+                    // &:nth-of-type(3),
+                    // &:nth-of-type(6),
+                    // &:nth-of-type(2),
+                    // &:nth-of-type(5) {
+                    //     text-align: left;
+                    // }
+                }
+            }
+        }
+        &_reg {
+            order: 1;
+            width: 50%;
+            margin-right: 0;
+            justify-content: flex-end;
+            margin-bottom: 3rem;
+
+            @media(max-width: 400px) {
+                justify-content: left;
+            }
         }
     }
 }
