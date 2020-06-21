@@ -121,7 +121,7 @@ a {
     }
     &_logo{
         margin-right: 80px;
-        background:url("../images/logo-blue-desktop.png") no-repeat;
+        //background:url("../images/logo-blue-desktop.png") no-repeat;
         width: 166px;
         height: 56px;
 
@@ -167,10 +167,6 @@ a {
             //align-self: flex-start;
             margin-right: 0;
         }
-        &_btn {
-            margin-bottom: 100px;
-        }
-
         &_top {
             height: auto;
             padding-bottom: 20px;
@@ -227,6 +223,9 @@ a {
 
         &_logo {
             margin-left: 35px;
+        }
+        &_content h1 {
+            line-height: 45px;
         }
     }
 
@@ -936,6 +935,11 @@ svg#menu {
         }
     }
 }
+@media(max-width:460px) {
+    .accordion_item h5{
+        font-size: 1.2rem;
+    }
+}
 
 //  *************STAGES SECTION *******
 .stages {
@@ -1338,6 +1342,17 @@ svg#menu {
         &_list {
             justify-content: center;
         }
+        li:nth-of-type(1)::after,
+        li:nth-of-type(2)::after,
+        li:nth-of-type(3)::after,
+        li:nth-of-type(4)::after,
+        li:nth-of-type(5)::after,
+        li:nth-of-type(6)::after,
+        li:nth-of-type(7)::after,
+        li:nth-of-type(8)::after,
+        li:nth-of-type(9)::after {
+            display: none;
+        }
     }
 }
 
@@ -1513,6 +1528,7 @@ svg#menu {
         background-position: 0 center;
         background-size: 100% 100%;
         position: relative;
+
     }
 
     .original-image {
@@ -1528,6 +1544,25 @@ svg#menu {
     &_dots {
         margin-top: 50px;
 
+    }
+    @media(max-width: 600px){
+
+        &_slider-wrap{
+            height: 343px;
+            width: 280px;
+            padding: 10px 7px;
+            box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+            border-radius: 5px;
+        }
+         &_slide {
+             background: url("../images/smile-good-mobile.jpg") no-repeat;
+
+         }
+         .original-image {
+             background: url("../images/smile-bad-mobile.jpg") no-repeat;
+             background-position: 0 center;
+             background-size: cover;
+         }
     }
 }
 
@@ -1974,7 +2009,7 @@ svg#menu {
         flex-wrap: wrap;
 
         input {
-            width: 220px;
+            max-width: 220px;
             height: 52px;
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
@@ -1986,6 +2021,9 @@ svg#menu {
 
     h4 {
         margin-bottom: 0.8rem;
+        @media(max-width: 430px){
+            text-align: center;
+        }
     }
 
     &_subtitle {

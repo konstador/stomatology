@@ -23,10 +23,18 @@
         width: 230px;
     }
 }
-@media(max-width:320px){
+@media(max-width:420px){
     .btn{
         height: 32px;
         font-size: 1.2rem;
         line-height: 1.2rem;
+        &--sm {
+            width: 100px;
+        }
+
+        &--big {
+            width: 160px;
+        }
     }
+    
 }

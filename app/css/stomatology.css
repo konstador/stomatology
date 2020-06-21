@@ -268,11 +268,50 @@ h6 {
   line-height: 26px; }
 
 .subtitle {
-  font-size: 1.8rem;
+  font-size: -webkit-calc(1.305rem + 0.4125vw);
+  font-size: calc(1.305rem + 0.4125vw);
   line-height: 120%;
   letter-spacing: 0.02em;
   color: rgba(0, 0, 0, 0.6);
   text-align: center; }
+  @media (min-width: 1200px) {
+    .subtitle {
+      font-size: 1.8rem; } }
+
+@media (max-width: 420px) {
+  body {
+    font-size: 1.4rem; }
+  h2 {
+    font-size: 36px;
+    line-height: 87%; }
+  h3 {
+    font-size: 18px;
+    line-height: 18px; }
+  h5 {
+    font-size: 12px;
+    line-height: 12px; }
+  h4 {
+    line-height: 2.8rem;
+    font-size: -webkit-calc(1.365rem + 0.8625vw);
+    font-size: calc(1.365rem + 0.8625vw); } }
+  @media (max-width: 420px) and (min-width: 1200px) {
+    h4 {
+      font-size: 2.4rem; } }
+
+@media (max-width: 420px) {
+  h6 {
+    font-size: 19px;
+    line-height: 26px; }
+  .subtitle {
+    font-size: -webkit-calc(1.305rem + 0.4125vw);
+    font-size: calc(1.305rem + 0.4125vw);
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.6);
+    text-align: center; } }
+  @media (max-width: 420px) and (min-width: 1200px) {
+    .subtitle {
+      font-size: 1.8rem; } }
 
 .btn {
   height: 52px;
@@ -304,11 +343,15 @@ h6 {
   .btn--big {
     width: 230px; }
 
-@media (max-width: 320px) {
+@media (max-width: 420px) {
   .btn {
     height: 32px;
     font-size: 1.2rem;
-    line-height: 1.2rem; } }
+    line-height: 1.2rem; }
+    .btn--sm {
+      width: 100px; }
+    .btn--big {
+      width: 160px; } }
 
 /* Slider */
 .slick-slider {
@@ -617,7 +660,6 @@ a {
     margin-left: 35px; }
   .header_logo {
     margin-right: 80px;
-    background: url("../images/logo-blue-desktop.png") no-repeat;
     width: 166px;
     height: 56px; }
   @media (max-width: 670px) {
@@ -648,8 +690,6 @@ a {
 @media (max-width: 900px) {
   .header_nav {
     margin-right: 0; }
-  .header_btn {
-    margin-bottom: 100px; }
   .header_top {
     height: auto;
     padding-bottom: 20px; }
@@ -706,7 +746,9 @@ a {
   .header .wrapper_left {
     width: auto; }
   .header_logo {
-    margin-left: 35px; } }
+    margin-left: 35px; }
+  .header_content h1 {
+    line-height: 45px; } }
 
 .advantages {
   display: -webkit-box;
@@ -1408,6 +1450,10 @@ svg#menu {
       padding-top: 40px;
       width: auto; } }
 
+@media (max-width: 460px) {
+  .accordion_item h5 {
+    font-size: 1.2rem; } }
+
 .stages {
   background: url(../images/stages-bg.jpg) no-repeat;
   background-size: contain;
@@ -1713,7 +1759,17 @@ svg#menu {
       -webkit-box-pack: center;
       -webkit-justify-content: center;
           -ms-flex-pack: center;
-              justify-content: center; } }
+              justify-content: center; }
+    .stages li:nth-of-type(1)::after,
+    .stages li:nth-of-type(2)::after,
+    .stages li:nth-of-type(3)::after,
+    .stages li:nth-of-type(4)::after,
+    .stages li:nth-of-type(5)::after,
+    .stages li:nth-of-type(6)::after,
+    .stages li:nth-of-type(7)::after,
+    .stages li:nth-of-type(8)::after,
+    .stages li:nth-of-type(9)::after {
+      display: none; } }
 
 .testimonials {
   margin-bottom: 21.0rem;
@@ -1881,6 +1937,20 @@ svg#menu {
     background-size: cover; }
   .diff_dots {
     margin-top: 50px; }
+  @media (max-width: 600px) {
+    .diff_slider-wrap {
+      height: 343px;
+      width: 280px;
+      padding: 10px 7px;
+      -webkit-box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+              box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+      border-radius: 5px; }
+    .diff_slide {
+      background: url("../images/smile-good-mobile.jpg") no-repeat; }
+    .diff .original-image {
+      background: url("../images/smile-bad-mobile.jpg") no-repeat;
+      background-position: 0 center;
+      background-size: cover; } }
 
 .communication {
   background: url("../images/communication-bg.jpg") no-repeat;
@@ -2295,7 +2365,7 @@ svg#menu {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
     .news_form input {
-      width: 220px;
+      max-width: 220px;
       height: 52px;
       -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
               box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
@@ -2305,6 +2375,9 @@ svg#menu {
       margin-right: 3rem; }
   .news h4 {
     margin-bottom: 0.8rem; }
+    @media (max-width: 430px) {
+      .news h4 {
+        text-align: center; } }
   .news_subtitle {
     text-align: center;
     padding-bottom: 4.7rem; }
@@ -2550,7 +2623,9 @@ input[type=range]::-ms-thumb {
   background-image: url("../images/diff.png");
   cursor: pointer; }
 
-@media (max-width: 320px) {
+@media (max-width: 420px) {
+  body {
+    width: 420px; }
   .contact {
     text-align: center; }
     .contact_phone {
@@ -2559,69 +2634,207 @@ input[type=range]::-ms-thumb {
     .contact_adress {
       font-size: 1rem;
       line-height: 1rem; }
-  .header .wrapper_left {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-  .header .wrapper_right {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center; }
-  .header_inside {
-    background: url("../images/header-bg.jpg") no-repeat; }
-  .header_top {
+  .header {
+    padding-bottom: 62px; }
+    .header .wrapper_left {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .header .wrapper_right {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .header_inside {
+      background: url("../images/header-bg-mobile.png") no-repeat;
+      background-position: top center; }
+    .header_top {
+      height: 70px;
+      padding: 22px 0; }
+    .header_title {
+      font-size: 2.4rem;
+      line-height: 21px;
+      margin-bottom: 1rem; }
+    .header_text {
+      font-size: 1.3rem;
+      line-height: 1.3rem;
+      margin-bottom: 2.8rem; }
+    .header_content {
+      width: 100%;
+      padding-top: 20px;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .header_btn {
+      margin-left: 0rem;
+      margin-bottom: 2.8rem; }
+    .header_logo {
+      margin-right: 56px;
+      margin-left: 65px;
+      width: 80px;
+      height: 27px; }
+    .header_contact-mobile {
+      display: block; }
+    .header .advantages-wrapper {
+      background: url("../images/advantages-bg.jpg") no-repeat;
+      background-size: contain; }
+  .advantages {
     -webkit-box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
             box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
-    height: 116px;
-    background: #FFFFFF;
-    padding-top: 30px; }
-  .header_nav {
-    height: 60px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    margin-right: 30px; } }
-  @media (max-width: 320px) and (max-width: 670px) {
-    .header_nav {
-      height: 0px; } }
-
-@media (max-width: 320px) {
-  .header_title {
-    font-size: 2.4rem;
-    line-height: 21px; }
-  .header_content {
-    width: 100%;
-    padding-top: 20px; }
-  .header_top-btn {
-    width: 100px;
-    margin-left: 0; }
-  .header_logo {
-    margin-right: 56px;
-    margin-left: 65px;
-    background: url("../images/logo-blue-mobile.png") no-repeat;
-    width: 80px;
-    height: 27px; }
-  .header_contact-mobile {
-    display: block;
-    font-size: 1.4rem; } }
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 280px;
+    padding: 4.7rem 4.2rem 5rem 4.2rem;
+    background-color: #FFFFFF; }
+    .advantages_item {
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin: 0 0 2.5rem 0; }
+    .advantages_title {
+      font-size: 1.8rem;
+      line-height: 1.8rem;
+      text-align: center;
+      margin-top: 2rem;
+      margin-bottom: 6px; }
+    .advantages_text {
+      font-size: 14px;
+      line-height: 120%;
+      text-align: center; }
+    .advantages_description {
+      width: 100%; }
+  .advantages-wrapper {
+    -webkit-box-shadow: 0px 0px 0px;
+            box-shadow: 0px 0px 0px;
+    border-radius: 0px;
+    padding: 22.9rem 0 0 0;
+    width: 100%; }
+  .service {
+    margin-bottom: 60px; }
+    .service_subtitle {
+      font-size: 18px;
+      line-height: 100%; }
+    .service_discription, .service_price-discription {
+      font-size: inherit;
+      line-height: 17px; }
+    .service_price-discription {
+      margin-bottom: 40px; }
+    .service_price-discription li {
+      line-height: 27px; }
+    .service_danger {
+      -webkit-box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+              box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+      border-radius: 5px;
+      padding: 38px 19px 0 19px; }
+      .service_danger-text {
+        margin-left: 0px; }
+        .service_danger-text p:nth-of-type(1) {
+          font-size: 18px;
+          line-height: 18px; }
+        .service_danger-text p:nth-of-type(2) {
+          font-size: inherit; }
+    .service_price {
+      padding-left: 0px; }
+      .service_price p:nth-of-type(1) {
+        font-size: 18px;
+        line-height: 18px; }
+      .service_price p:nth-of-type(2) {
+        font-size: inherit; }
+    .service_form {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .service_form-field {
+        margin-right: 0px; }
+      .service_form-agreement {
+        font-size: 10px;
+        line-height: 120%;
+        width: 100%;
+        margin-top: 10px;
+        padding-top: 0;
+        text-align: center; }
+      .service_form button {
+        margin-top: 30px; }
+  .feedback-form {
+    padding: 50px 30px; }
+    .feedback-form_title {
+      font-size: 18px;
+      line-height: 18px;
+      margin-bottom: 16px; }
+    .feedback-form_subtitle {
+      font-size: 14px;
+      line-height: 120%;
+      margin-bottom: 50px; }
+    .feedback-form input {
+      height: 32px;
+      padding-left: 18px; }
+      .feedback-form input::-webkit-input-placeholder {
+        font-size: 12px;
+        line-height: 12px; }
+      .feedback-form input::-moz-placeholder {
+        font-size: 12px;
+        line-height: 12px; }
+      .feedback-form input:-ms-input-placeholder {
+        font-size: 12px;
+        line-height: 12px; }
+      .feedback-form input::-ms-input-placeholder {
+        font-size: 12px;
+        line-height: 12px; }
+      .feedback-form input::placeholder {
+        font-size: 12px;
+        line-height: 12px; }
+    .feedback-form_caption {
+      font-size: 14px;
+      line-height: 14px; }
+    .feedback-form_agreement {
+      font-size: 1rem;
+      line-height: 120%; }
+    .feedback-form button {
+      width: 100%; }
+  .caries {
+    padding-top: 0px;
+    padding-bottom: 35px; }
+    .caries_questions {
+      width: 100%;
+      padding-top: 40px;
+      padding-right: 10px;
+      padding-bottom: 15px;
+      padding-left: 10px;
+      margin-left: 0px;
+      margin-right: 0; }
+      .caries_questions h3 {
+        margin-left: 0px;
+        text-align: center; }
+    .caries_img {
+      width: 100%; }
+  .accordion_text p {
+    font-size: 10px;
+    line-height: 120%; } }
 
 /*# sourceMappingURL=stomatology.css.map */

@@ -1,6 +1,6 @@
-@media(max-width:320px){
+@media(max-width:420px){
     body {
-        //width: 320px;
+        width: 420px;
     }
 
     .contact {
@@ -17,6 +17,7 @@
         }
     }
     .header {
+        padding-bottom: 62px;
         .wrapper {
             &_left {
                 display: flex;
@@ -27,70 +28,265 @@
                 display: flex;
                 align-items: center;
             }
-
         }
 
-        &_inside {
-            background: url("../images/header-bg.jpg") no-repeat;
-            //background-size: contain;
-        }
+       &_inside {
+            background: url("../images/header-bg-mobile.png") no-repeat;
+           background-position: top center;
+       }
 
         &_top {
-            box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
-            height: 116px;
-            background: #FFFFFF;
-            padding-top: 30px;
+            height: 70px;
+            padding: 22px 0;
         }
 
         &_nav {
-            height: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-right: 30px;
+            // height: 60px;
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-between;
+            // margin-right: 30px;
 
-            @media(max-width: 670px) {
-                height: 0px;
-            }
         }
 
         &_title {
             font-size:2.4rem;
             line-height: 21px;
+            margin-bottom: 1rem;
         }
 
         &_text {
-            
+            font-size: 1.3rem;
+            line-height: 1.3rem;
+            margin-bottom: 2.8rem;
 
         }
 
         &_content {
             width: 100%;
             padding-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items:center;
         }
 
 
         &_btn {
+            margin-left: 0rem;
+            margin-bottom: 2.8rem;
             
-        }
-
-        &_top-btn {
-            width: 100px;
-            margin-left: 0;
         }
 
         &_logo {
             margin-right: 56px;
             margin-left: 65px;
-            background: url("../images/logo-blue-mobile.png") no-repeat;
             width: 80px;
             height: 27px;
         }
 
         &_contact-mobile {
            display: block;
-           font-size: 1.4rem ;
+        }
+        .advantages-wrapper {
+            background: url("../images/advantages-bg.jpg") no-repeat;
+            background-size: contain;
         }
 
     }
+    .advantages {
+        box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+        border-radius: 5px;
+        margin: 0 auto;
+        width: 280px;
+        padding: 4.7rem 4.2rem 5rem 4.2rem;
+         background-color:#FFFFFF;
+    
+
+        &_item {
+            align-items: center;
+            flex-direction: column;
+            margin: 0 0 2.5rem 0;
+        }
+
+        &_title {
+            font-size: 1.8rem;
+            line-height: 1.8rem;
+            text-align: center;
+            margin-top: 2rem;
+            margin-bottom: 6px;
+        }
+
+        &_text {
+            font-size: 14px;
+            line-height: 120%;
+            text-align: center;
+        }
+
+        &_description {
+            width: 100%;
+        }
+    }
+    .advantages-wrapper {
+        box-shadow: 0px 0px 0px;
+        border-radius: 0px;
+        padding: 22.9rem 0 0 0;
+        width: 100%;
+    }
+
+    // SERVICE BLOCK******************************************
+    .service {
+        margin-bottom: 60px;
+
+        &_subtitle {
+            font-size: 18px;
+            line-height: 100%;
+            
+        }
+
+        &_discription,
+        &_price-discription {
+            font-size: inherit;
+            line-height: 17px;
+        }
+        &_price-discription{
+            margin-bottom: 40px;
+        }
+
+        &_price-discription li {
+            line-height: 27px;
+        }
+
+        &_danger {
+            box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+            border-radius: 5px;
+            padding: 38px 19px 0 19px;
+
+            &-text {
+                margin-left: 0px;
+
+                p:nth-of-type(1) {
+                    font-size: 18px;
+                    line-height: 18px;
+                }
+
+                p:nth-of-type(2) {
+                    font-size: inherit;
+                    
+                }
+            }
+        }
+
+        &_price {
+            padding-left: 0px;
+
+            p:nth-of-type(1) {
+                font-size: 18px;
+                line-height: 18px;
+            }
+
+            p:nth-of-type(2) {
+                font-size: inherit;
+            }
+        }
+
+        &_form {
+            justify-content: center;
+
+            &-field {
+                margin-right: 0px;
+            }
+
+
+            &-agreement {
+                font-size: 10px;
+                line-height: 120%;
+                width: 100%;
+                margin-top: 10px;
+                padding-top: 0;
+                text-align: center;
+            }
+
+            button {
+                margin-top: 30px;
+            }
+        }
+
+    }
+    .feedback-form {
+         padding: 50px 30px;
+        &_title {
+           font-size: 18px;
+           line-height: 18px;
+            margin-bottom: 16px;
+           
+        }
+
+        &_subtitle {
+            font-size: 14px;
+            line-height: 120%;
+            margin-bottom: 50px;
+        }
+
+        input {
+            height: 32px;
+            padding-left: 18px;
+
+            &::placeholder {
+                font-size: 12px;
+                line-height: 12px;
+            }
+        }
+
+        &_caption {
+            font-size: 14px;
+            line-height: 14px;
+        }
+
+        &_agreement {
+            font-size: 1rem;
+            line-height: 120%;
+        }
+
+        button {
+             width: 100%;
+        }
+    }
+
+   //************CARIES BLOCK**************************
+.caries {
+    padding-top: 0px;
+    padding-bottom: 35px;
+    .wrapper {
+    }
+
+    &_questions {
+        width: 100%;
+        padding-top: 40px;
+        padding-right: 10px;
+        padding-bottom: 15px;
+        padding-left:10px;
+        margin-left: 0px;
+        margin-right: 0;
+
+        h3 {
+            margin-left: 0px;
+           text-align: center;
+        }
+    }
+
+    &_img {
+        width: 100%;
+    }
+}
+.accordion {
+    &_text {
+        p {
+            font-size: 10px;
+            line-height: 120%;
+        }
+    }
+    
+}
+
+    
 }
