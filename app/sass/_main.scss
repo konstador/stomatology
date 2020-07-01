@@ -460,7 +460,7 @@ svg#menu {
 /************ END OF MENU BLOCK**********/
 
 
-// SERVICE BLOCK******************************************
+// SERVICE BLOCK*****************************************
 .service {
     @include wrapper();
     height: 660px;
@@ -534,7 +534,6 @@ svg#menu {
     }
 
     &_price {
-        //background: url(../images/Group26.jpg) no-repeat, $primary;
         background-size: cover;
         background-color: $primary;
         height: 135px;
@@ -801,7 +800,6 @@ svg#menu {
             margin-bottom: 23px;
         }
     }
-
     &_img {
         width: 41.3%;
         z-index: 10;
@@ -1356,7 +1354,7 @@ svg#menu {
     }
 }
 
-//TESTIMONIALS SECTION ************************************
+//*************TESTIMONIALS SECTION *****************
 .testimonials {
     margin-bottom: 21.0rem;
     max-width: 1488px;

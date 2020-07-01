@@ -81,3 +81,38 @@
         }
     }
 }
+@media(max-width:420px){
+    
+    // *** Arrows ***
+    
+    .btn-slider-prev,
+    .btn-slider-next {
+        width: 32px;
+        height: 32px;
+        span {
+            font-size: 2.2rem;
+        }
+    }
+
+    /* Dots */ 
+    
+    .slick-dots {
+        height: 16px;
+        width: 110px;
+        li {
+            width: 16px;
+            height: 16px;
+
+            button {
+                height: 9px;
+                width: 9px;
+            }
+
+            &.slick-active button {
+                height: 16px;
+                width: 16px;
+                border-width: 4px;
+            }
+        }
+    }
+}

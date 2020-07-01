@@ -1,6 +1,7 @@
 @media(max-width:420px){
     body {
-        width: 420px;
+        max-width: 420px;
+        min-width: 320px;
     }
 
     .contact {
@@ -254,10 +255,9 @@
 
    //************CARIES BLOCK**************************
 .caries {
-    padding-top: 0px;
+    padding-top: 35px;
     padding-bottom: 35px;
-    .wrapper {
-    }
+    background:#F9F9F9;
 
     &_questions {
         width: 100%;
@@ -288,5 +288,66 @@
     
 }
 
+// ***********STAGES SECTION***************
+.stages{
+    padding-top: 80px;
+    background:none;
+    &_subtitle{
+        margin: 15px 0 25px 0;
+    }
+    &_item{
+        p{
+            font-size: 1.2rem;
+        }
+    }
+}
+
+//************TESTIMONIALS SECTION *****************
+.testimonials{
+    padding-left:15px;
+    padding-right: 15px;
+    width: 100%;
+    height: 280px;
+    margin-bottom: 60px;
+
+    &_slider{
+        height: 211px;
+    }
+    &_card{
+        width: 100%;
+        height: 211px;
+        button{
+            font-size: 10px;
+        }
+    }
+    &_btn-next{
+        right: -0px;
+    }
+    &_btn-prev{
+        left: -0px;
+    }
+    &_patient{
+        font-size: 10px;
+    }
+    &_userName{
+        font-size: 14px;
+    }
+    &_text{
+        font-size: 10px;
+        line-height: 120%;
+    }
+}
+//***********DIFF SECTION*****************
+.diff {
+    background:#F9F9F9;
+    padding: 40px 15px 40px 15px;
+    &_slider-wrap 
+        .btn-slider-next {
+            right: -16px;
+        }
+        .btn-slider-prev {
+            left: -16px;
+        }
+}
     
 }
