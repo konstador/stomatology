@@ -15,7 +15,7 @@ html {
 
 body {
     max-width: 1920px;
-    min-width:320px;
+    min-width: 320px;
     margin: 0 auto;
     position: relative;
     background-color: #ffffff;
@@ -39,6 +39,120 @@ a {
         line-height: 1.4rem;
         font-family: "MullerMedium";
         opacity: 0.6;
+    }
+}
+
+.feedback-form {
+    &_title {
+        font-family: MullerMedium, sans-serif;
+        font-size: 2.4rem;
+        line-height: 24px;
+        letter-spacing: 0.02em;
+        margin-bottom: 8px;
+    }
+
+    &_subtitle,
+    &_subtitle a{
+        font-family: MullerMedium, sans-serif;
+        font-size: 1.6rem;
+        letter-spacing: 0.02em;
+        color: rgba(0, 0, 0, 0.6);
+    }
+     &_subtitle{
+          margin-bottom: 40px;
+     }
+    
+
+    &_fields {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    &_inputs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    input {
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        width: 220px;
+        height: 52px;
+        padding-left: 18px;
+
+        &::placeholder {
+            font-family: Muller;
+            font-size: 1.6rem;
+            line-height: 16px;
+            letter-spacing: 0.02em;
+            color: rgba(0, 0, 0, 0.6);
+        }
+    }
+
+    &_caption {
+        font-family: MullerBold, sans-serif;
+        font-size: 1.6rem;
+        line-height: 16px;
+        letter-spacing: 0.02em;
+        margin-bottom: 10px;
+    }
+
+    &_agreement {
+        font-size: 1rem;
+        line-height: 120%;
+        letter-spacing: 0.06em;
+        color: rgba(0, 0, 0, 0.6);
+    }
+
+    @media(max-width:1440px) {
+        &-agreement {
+            width: 100%;
+            text-align: center;
+        }
+
+        &_fields {
+            justify-content: center;
+        }
+
+        &_field {
+            width: 46%;
+            margin-bottom: 20px;
+            margin-right: 30px;
+        }
+
+        button {
+            margin-top: 25px;
+            width: 100%;
+        }
+
+        &-order {
+            flex-direction: column;
+            max-width: 278px;
+            margin-top: 0px;
+        }
+
+        input {
+            width: 100%;
+        }
+    }
+
+    @media(max-width:780px) {
+        &_field {
+            margin-right: 10px;
+        }
+
+        &_inputs {
+            justify-content: center;
+        }
+    }
+
+    @media(max-width:630px) {
+        &_field {
+            width: 100%;
+        }
     }
 }
 
@@ -84,7 +198,8 @@ a {
         align-items: center;
         justify-content: space-between;
         margin-right: 30px;
-        @media(max-width: 670px){
+
+        @media(max-width: 670px) {
             height: 0px;
         }
     }
@@ -119,18 +234,21 @@ a {
     &_top-btn {
         margin-left: 35px;
     }
-    &_logo{
+
+    &_logo {
         margin-right: 80px;
         //background:url("../images/logo-blue-desktop.png") no-repeat;
         width: 166px;
         height: 56px;
 
     }
-    &_contact{
-        @media(max-width: 670px){
+
+    &_contact {
+        @media(max-width: 670px) {
             display: none;
         }
-        &-mobile{
+
+        &-mobile {
             display: none;
         }
     }
@@ -142,16 +260,16 @@ a {
         &_btn {
             margin-bottom: 100px;
         }
+
         &_top {
             height: auto;
             padding-bottom: 20px;
         }
 
         .wrapper {
-            //justify-content: flex-end;
             &_left {
-               width: 100%;
-               justify-content: space-between;
+                width: 100%;
+                justify-content: space-between;
             }
 
             &_right {
@@ -161,27 +279,29 @@ a {
         }
     }
 }
+
 @media(max-width: 900px) {
     .header {
         &_nav {
-            //align-self: flex-start;
             margin-right: 0;
         }
+
         &_top {
             height: auto;
             padding-bottom: 20px;
         }
-        &_logo{
+
+        &_logo {
             align-self: center;
             margin-right: 0;
         }
-        &_content{
+
+        &_content {
             width: 100%;
         }
 
         .wrapper {
             flex-direction: column;
-            //justify-content: flex-end;
             &_left {
                 flex-wrap: wrap;
                 flex-direction: column;
@@ -194,22 +314,26 @@ a {
         }
     }
 }
-@media(max-width:670px){
+
+@media(max-width:670px) {
     .header {
         .wrapper {
             flex-direction: row;
             position: relative;
         }
+
         .wrapper_left {
             width: auto;
         }
-        &_logo{
+
+        &_logo {
             margin-left: 95px;
         }
 
     }
 
 }
+
 @media(max-width:500px) {
     .header {
         .wrapper {
@@ -224,6 +348,7 @@ a {
         &_logo {
             margin-left: 35px;
         }
+
         &_content h1 {
             line-height: 45px;
         }
@@ -249,7 +374,7 @@ a {
         //font-size: 2.4rem;
         line-height: 2.4rem;
         letter-spacing: 0.02em;
-         @include font-size(2.4rem)
+        @include font-size(2.4rem)
     }
 
     &_text {
@@ -272,13 +397,15 @@ a {
 }
 
 @media (max-width:1470px) {
-    .advantages{
+    .advantages {
         height: 200px;
-        &_item{
+
+        &_item {
             width: calc(50% - 30px);
         }
     }
 }
+
 @media (max-width:1300px) {
     .advantages {
         &_description {
@@ -293,6 +420,7 @@ a {
         height: auto;
         padding-top: 25px;
         padding-left: 20px;
+
         &_item {
             width: 100%;
             margin-bottom: 25px;
@@ -300,8 +428,10 @@ a {
 
     }
 }
+
 /********MENU BLOCK****************/
 .menu {
+
     //@include size(7);
     &_list {
         display: flex;
@@ -346,6 +476,7 @@ a {
         height: 18px;
         width: 24px;
         cursor: pointer;
+
         @media (max-width:670px) {
             display: block;
             position: absolute;
@@ -453,6 +584,7 @@ li.menu_item-1 {
         line-height: 36px;
     }
 }
+
 svg#menu {
     width: 24px;
 }
@@ -467,6 +599,16 @@ svg#menu {
     display: flex;
     justify-content: space-between;
     margin-bottom: 140px;
+    position: relative;
+
+    &_tooth {
+        position: absolute;
+        top: -200px;
+        right: -15%;
+        @media(max-width: 1920px){
+            display: none;
+        }
+    }
 
     &_about {
         width: 57%;
@@ -477,7 +619,7 @@ svg#menu {
     }
 
     &_feedback {
-        width: 40%;
+        width: 40.5%;
     }
 
     &_subtitle {
@@ -567,10 +709,7 @@ svg#menu {
         background: #FFFFFF;
         box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
         border-radius: 5px;
-        padding: 50px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        padding: 40px;
 
         hr {
             width: 100%;
@@ -582,83 +721,32 @@ svg#menu {
 
         &-field {
             margin-bottom: 20px;
-            margin-right: 10px;
         }
 
+        &-order {
+            display: flex;
+            margin-top: 50px;
+        }
 
         &-agreement {
             width: 57%;
             padding-top: 5px;
-            margin-top: 50px;
 
             a {
                 color: $primary;
             }
         }
-
-        button {
-            width: 184px;
-            margin-top: 50px;
-        }
     }
 
-
-}
-
-.feedback-form {
-    &_title {
-        font-family: MullerMedium, sans-serif;
-        font-size: 2.4rem;
-        line-height: 24px;
-        letter-spacing: 0.02em;
-        margin-bottom: 8px;
-    }
-
-    &_subtitle {
-        font-family: MullerMedium, sans-serif;
-        font-size: 1.6rem;
-        line-height: 19px;
-        letter-spacing: 0.02em;
-        color: rgba(0, 0, 0, 0.6);
-        margin-bottom: 40px;
-        align-self:center;
-    }
-
-    input {
-        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        width: 220px;
-        height: 52px;
-        padding-left: 18px;
-
-        &::placeholder {
-            font-family: Muller;
-            font-size: 1.6rem;
-            line-height: 16px;
-            letter-spacing: 0.02em;
-            color: rgba(0, 0, 0, 0.6);
-        }
-    }
-
-    &_caption {
-        font-family: MullerBold, sans-serif;
-        font-size: 1.6rem;
-        line-height: 16px;
-        letter-spacing: 0.02em;
-        margin-bottom: 10px;
-    }
-
-    &_agreement {
-        font-size: 1rem;
-        line-height: 120%;
-        letter-spacing: 0.06em;
-        color: rgba(0, 0, 0, 0.6);
-    }
-
-    button {
+    &_btn {
         width: 184px;
+        margin-right: 20px;
     }
+
+
 }
+
+
 
 @media(max-width:1440px) {
     .service {
@@ -666,11 +754,16 @@ svg#menu {
         flex-direction: column;
         justify-content: flex-start;
         margin-bottom: 0;
-
+        
+        &_title,
+        &_subtitle,
+        &_discription{
+            margin-bottom: 25px;
+        }
         &_about {
             width: 100%;
             height: 57%;
-            align-items:center;
+            align-items: center;
         }
 
         &_feedback {
@@ -679,11 +772,13 @@ svg#menu {
         }
 
         &_price-discription {
-           align-self:flex-start;
+            align-self: flex-start;
         }
+
         &_danger {
             flex-direction: column;
-            img{
+
+            img {
                 align-self: center;
                 margin-bottom: 10px;
             }
@@ -697,6 +792,7 @@ svg#menu {
                     text-align: center;
                     margin-bottom: 10px;
                 }
+
                 p:nth-of-type(2) {
                     text-align: center;
                     margin-bottom: 20px;
@@ -705,10 +801,9 @@ svg#menu {
         }
 
         &_price {
-            //background: url(../images/Group26.jpg) no-repeat, $primary;
             flex-direction: column;
             justify-content: center;
-            align-items:center;
+            align-items: center;
             padding-left: 0px;
             margin-bottom: 20px;
 
@@ -718,30 +813,32 @@ svg#menu {
         }
 
         &_form {
+            //background: url("../images/communication-bg.jpg") no-repeat;
+            padding-left: 0;
+            padding-right: 0;
+
             &-agreement {
                 width: 100%;
+                text-align: center;
+
+            }
+
+            &-order {
+                flex-direction: column;
+                width: 278px;
                 margin-top: 0px;
             }
 
-            button {
-                align-self:center;
-                margin-top: 0px;
-            }
-            &-field{
-                width: 48%;
-            }
-            input{
-                width: 100%;
+            &-title,
+            &-subtitle {
+                text-align: center;
             }
         }
 
-        &_title,
-        &_discription,
-        &_subtitle {
-            margin-bottom: 25px;
-        }
+
     }
 }
+
 @media(max-width:630px) {
     .service {
         &_form {
@@ -750,18 +847,10 @@ svg#menu {
                 margin-top: 0px;
             }
 
-            button {
-                align-self: center;
-                margin-top: 0px;
-            }
-
             &-field {
                 width: 100%;
             }
 
-            input {
-                width: 100%;
-            }
         }
     }
 
@@ -771,7 +860,7 @@ svg#menu {
 //************CARIES BLOCK**************************
 .caries {
     background: url("../images/caries-bg.jpg") no-repeat;
-    background-size:100% 100%;
+    background-size: 100% 100%;
     padding-top: 80px;
     padding-bottom: 80px;
     //@extend: 80px 0;
@@ -791,7 +880,7 @@ svg#menu {
         @include padding-top(10rem);
         padding-right: 10px;
         padding-bottom: 10px;
-         @include padding-left(14.5rem);
+        @include padding-left(14.5rem);
         margin-left: -50px;
         z-index: 1;
 
@@ -800,6 +889,7 @@ svg#menu {
             margin-bottom: 23px;
         }
     }
+
     &_img {
         width: 41.3%;
         z-index: 10;
@@ -889,38 +979,46 @@ svg#menu {
         }
     }
 }
-@media(max-width:1300px){
-    .accordion{
-        &_text p{
+
+@media(max-width:1300px) {
+    .accordion {
+        &_text p {
             width: 95%;
         }
     }
 }
+
 @media(max-width:970px) {
     .accordion {
         height: auto;
         overflow-y: auto;
     }
 }
+
 @media(max-width:970px) {
-    .caries{
-        background:none;
-        .wrapper{
+    .caries {
+        background: none;
+
+        .wrapper {
             flex-direction: column;
         }
-        &_img{
+
+        &_img {
             width: 100%;
             padding-left: 20px;
             padding-right: 20px;
         }
+
         &_btn-prev {
             left: -0px;
         }
+
         &_btn-next {
             right: -0px;
         }
-        &_questions{
-            margin-top:23px;
+
+        &_questions {
+            margin-top: 23px;
             margin-right: 20px;
             margin-left: 20px;
             width: 100%;
@@ -928,21 +1026,22 @@ svg#menu {
             padding-top: 0;
             padding-top: 40px;
             width: auto;
-            
+
 
         }
     }
 }
+
 @media(max-width:460px) {
-    .accordion_item h5{
+    .accordion_item h5 {
         font-size: 1.2rem;
     }
 }
 
 //  *************STAGES SECTION *******
 .stages {
-    background:url(../images/stages-bg.jpg) no-repeat;
-    background-size:contain;
+    background: url(../images/stages-bg.jpg) no-repeat;
+    background-size: contain;
     max-width: 1140px;
     margin: 0 auto;
     @include margin-bottom(140px);
@@ -1214,6 +1313,7 @@ svg#menu {
 
     @media(max-width:1200px) {
         padding: 0 15px;
+
         li:nth-of-type(1)::after,
         li:nth-of-type(2)::after,
         li:nth-of-type(3)::after,
@@ -1226,42 +1326,52 @@ svg#menu {
             position: absolute;
             width: 24px;
             height: 24px;
-            background-color:$primary;
+            background-color: $primary;
             border-radius: 50%;
             display: flex;
             justify-content: center;
-            align-items:center;
-            color:white;
-            top:5px;
+            align-items: center;
+            color: white;
+            top: 5px;
             right: 50%;
         }
-        li:nth-of-type(1)::after{
+
+        li:nth-of-type(1)::after {
             content: "1";
         }
+
         li:nth-of-type(2)::after {
             content: "2";
         }
+
         li:nth-of-type(3)::after {
             content: "3";
         }
+
         li:nth-of-type(4)::after {
             content: "4";
         }
+
         li:nth-of-type(5)::after {
             content: "5";
         }
+
         li:nth-of-type(6)::after {
             content: "6";
         }
+
         li:nth-of-type(7)::after {
             content: "7";
         }
+
         li:nth-of-type(8)::after {
             content: "8";
         }
+
         li:nth-of-type(9)::after {
             content: "9";
         }
+
         &_point,
         li:nth-of-type(1) span::after,
         li:nth-of-type(2) span::after,
@@ -1292,7 +1402,7 @@ svg#menu {
         }
 
         &_item {
-            margin: 0 20px 0 0 ;
+            margin: 0 20px 0 0;
         }
 
         &_list {
@@ -1326,11 +1436,13 @@ svg#menu {
             }
         }
     }
+
     @media(max-width:1115px) {
         &_list {
             justify-content: center;
         }
     }
+
     @media(max-width:750px) {
 
         &_item {
@@ -1340,6 +1452,7 @@ svg#menu {
         &_list {
             justify-content: center;
         }
+
         li:nth-of-type(1)::after,
         li:nth-of-type(2)::after,
         li:nth-of-type(3)::after,
@@ -1405,6 +1518,7 @@ svg#menu {
         @media (max-width:1600px) {
             width: 95%;
         }
+
         @media (max-width:750px) {
             height: 220px;
         }
@@ -1535,7 +1649,7 @@ svg#menu {
         width: 50%;
         height: 100%;
         background: url("../images/smile-bad.jpg") no-repeat;
-        background-position: 0 center;
+        //background-position: 0 center;
         background-size: cover;
     }
 
@@ -1543,33 +1657,46 @@ svg#menu {
         margin-top: 50px;
 
     }
-    @media(max-width: 600px){
 
-        &_slider-wrap{
+    @media(max-width: 600px) {
+
+        &_slider-wrap {
             height: 343px;
             width: 280px;
             padding: 10px 7px;
             box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
             border-radius: 5px;
         }
-         &_slide {
-             background: url("../images/smile-good-mobile.jpg") no-repeat;
 
-         }
-         .original-image {
-             background: url("../images/smile-bad-mobile.jpg") no-repeat;
-             background-position: 0 center;
-             background-size: cover;
-         }
+        &_slide {
+            background: url("../images/smile-good-mobile.jpg") no-repeat;
+             background-size: 100% 100%;
+
+        }
+
+        .original-image {
+            background: url("../images/smile-bad-mobile.jpg") no-repeat;
+            background-position: 0 center;
+            background-size: cover;
+        }
     }
 }
 
 // COMMUNICATION SECTION*******************************
 .communication {
     background: url("../images/communication-bg.jpg") no-repeat;
-    background-size: 100% 100%;
+    background-size: cover;
     padding-top: 5.9rem;
     padding-bottom: 3.6rem;
+    &_btn {
+        width: 278px;
+        color: $primary;
+        background-color: white;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        margin-bottom: 25px;
+        margin-top: 26px;
+    }
 
     &_form {
         &-title {
@@ -1581,6 +1708,9 @@ svg#menu {
             color: rgba(255, 255, 255, 0.6);
             text-align: center;
         }
+        &-subtitle a {
+            color: rgba(255, 255, 255, 0.6);
+        }
 
         &-agreement {
             color: rgba(255, 255, 255, 0.6);
@@ -1591,88 +1721,18 @@ svg#menu {
                 color: white;
             }
         }
-
-        &-fields {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        &-inputs {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        &-field {
-            margin-right: 3rem;
-        }
-
         &-caption {
             color: white;
         }
-
-        button {
-            width: 278px;
-            color: $primary;
-            background-color: white;
-            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 5px;
-            margin-bottom: 25px;
-            margin-top: 26px;
-        }
-    }
-}
-
-@media(max-width:1400px) {
-    .communication {
-        &_form {
-            button {
-                margin-top: 24px;
-            }
-
+        @media (min-width:780px) {
             &-field {
-                width: 46%;
-                margin-bottom: 20px;
-            }
-            &-fields{
-                justify-content: center;
+                margin-right: 3rem;
             }
 
-            input {
-                width: 100%;
-            }
-            &-inputs{
-                justify-content: center;
-            }
         }
     }
 }
-@media(max-width:780px) {
-    .communication {
-        &_form {
-            button {
-                //align-self: center;
-                margin-top: 24px;
-            }
 
-            &-field {
-                margin-right: 10px;
-            }
-
-            &-fields {
-                justify-content: center;
-            }
-
-            input {
-                width: 100%;
-            }
-
-            &-inputs {
-                justify-content: center;
-            }
-        }
-    }
-}
 
 //*****DOCTORS SECTION**************************
 .doctors {
@@ -1722,7 +1782,8 @@ svg#menu {
         padding: 4rem 3rem 4.5rem 4rem;
         background: #FFFFFF;
         border-radius: 5px;
-        @media(max-width: 550px){
+
+        @media(max-width: 550px) {
             flex-direction: column;
         }
     }
@@ -1754,29 +1815,35 @@ svg#menu {
         line-height: 120%;
     }
 }
-@media(max-width:1470px){
-    .doctors{
-        &_wrapper{
+
+@media(max-width:1470px) {
+    .doctors {
+        &_wrapper {
             max-width: 705px;
         }
-        &_slider{
+
+        &_slider {
             max-width: 705px;
-            &-next{
+
+            &-next {
                 right: 0;
             }
         }
     }
 }
+
 @media(max-width:550px) {
-    .doctors{
-        &_pic{
+    .doctors {
+        &_pic {
             width: 85px;
             margin-bottom: 2rem;
         }
+
         &_card {
             flex-direction: column;
             padding: 4rem 1.2rem 4rem 1.2rem;
         }
+
         &_speciality {
             font-size: 1.2rem;
             line-height: 120%;
@@ -1794,29 +1861,35 @@ svg#menu {
             line-height: 120%;
             text-align: center;
         }
-         &_about {
-             align-items:center;
-         }
+
+        &_about {
+            align-items: center;
+        }
+
+        &_slider {
+            height: 345px;
+        }
     }
 }
 
-// COLLECTIVE SECTION *******************
+// COLLECTIVE BLOCK *******************
 
 .collective {
     width: 100%;
     background: url("../images/collective-bg.jpg") no-repeat;
-    background-position:top center;
+    background-position: top center;
     background-size: contain;
     height: 38.8vw;
     max-height: 745px;
-    @media(max-width:1000px){
+
+    @media(max-width:1000px) {
         background-size: cover;
-          background-position:center center;
+        background-position: center center;
     }
 
     &_text {
         font-family: "MullerMedium";
-        font-size: 2.4rem;
+        @include font-size(2.4rem);
         line-height: 2.4rem;
         letter-spacing: 0.02em;
         color: #FFFFFF;
@@ -1825,7 +1898,7 @@ svg#menu {
     &_content {
         display: flex;
         justify-content: center;
-        align-items:center;
+        align-items: center;
         height: 33.5vw;
         max-height: 644px;
     }
@@ -1833,8 +1906,16 @@ svg#menu {
     &_text {
         text-align: center;
     }
-    .advantages-wrapper{
+
+    .advantages-wrapper {
         margin-top: -80px;
+    }
+
+    @media(max-width: 880px) {
+        .advantages-wrapper {
+            margin-top: 0px;
+        }
+
     }
 }
 
@@ -1872,6 +1953,14 @@ svg#menu {
     button {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    @media(max-width: 1000px) {
+        margin-top: 0px;
+    }
+
+    @media(max-width: 880px) {
+        padding-top: 20rem;
     }
 }
 
@@ -1911,6 +2000,7 @@ svg#menu {
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         margin-bottom: 22px;
+
         a {
             color: $primary;
         }
@@ -1945,23 +2035,26 @@ svg#menu {
 
 }
 
-@media(max-width:800px){
-    .contacts{
+@media(max-width:800px) {
+    .contacts {
         &_item {
             height: 100px;
             justify-content: center;
-            &:nth-of-type(1){
+
+            &:nth-of-type(1) {
                 flex-wrap: wrap;
-                box-shadow:0px 0px 0px;
+                box-shadow: 0px 0px 0px;
                 height: auto;
             }
 
         }
-        &_openMap{
+
+        &_openMap {
             display: none;
         }
+
         &_phone,
-        &_email{
+        &_email {
             width: 100%;
             height: 100px;
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
@@ -1971,21 +2064,25 @@ svg#menu {
             flex-direction: column;
             justify-content: center;
         }
-         &_phone{
-             margin-bottom: 22px;
-         }
+
+        &_phone {
+            margin-bottom: 22px;
+        }
     }
 }
+
 @media(max-width:620px) {
     .contacts {
         .wrapper {
             flex-direction: column;
         }
+
         &_map {
             height: 390px;
             width: 100%;
             border-radius: 0px;
         }
+
         &_data {
             width: 100%;
             margin-right: 00px;
@@ -2019,7 +2116,8 @@ svg#menu {
 
     h4 {
         margin-bottom: 0.8rem;
-        @media(max-width: 430px){
+
+        @media(max-width: 430px) {
             text-align: center;
         }
     }
@@ -2035,7 +2133,7 @@ svg#menu {
     background-color: #02173D;
     @include padding(10rem 0);
 
-    &_logo{
+    &_logo {
         margin-right: 80px;
     }
 
@@ -2089,11 +2187,13 @@ svg#menu {
     &_linkGroup-1 {
         margin-bottom: 6rem;
     }
-    &_linkList-1{
-        li{
+
+    &_linkList-1 {
+        li {
             margin-right: 2rem;
         }
     }
+
     &_linkList-2 {
         li {
             margin-right: 2rem;
@@ -2122,13 +2222,15 @@ svg#menu {
         }
     }
 }
-@media(max-width:1300px){
+
+@media(max-width:1300px) {
     .footer {
         &_reg {
             width: 100%;
             justify-content: flex-end;
             margin-right: 2rem;
         }
+
         &_linkList-2 {
             li {
                 //margin-bottom: 20px;
@@ -2136,6 +2238,7 @@ svg#menu {
         }
     }
 }
+
 @media(max-width:1094px) {
     .footer {
         &_linkList-2 {
@@ -2145,36 +2248,45 @@ svg#menu {
         }
     }
 }
+
 @media(max-width:900px) {
     .footer {
-        &_linkGroup-1{
+        &_linkGroup-1 {
             flex-direction: column;
 
         }
-        &_logo{
+
+        &_logo {
             margin-right: 0;
         }
-        &_linkList-1{
+
+        &_linkList-1 {
             height: 60px;
-            align-items:center;
+            align-items: center;
         }
-        &_reg{
+
+        &_reg {
             width: auto;
         }
-        &_cuption{
+
+        &_cuption {
             text-align: center;
         }
+
         &_linkGroup-2 {
             flex-direction: column;
         }
+
         &_linkList-2 {
             margin-bottom: 50px;
             flex-wrap: wrap;
-            li{
+
+            li {
                 margin-bottom: 20px;
             }
         }
-        &_creators{
+
+        &_creators {
             font-size: 1.2rem;
         }
     }
@@ -2183,27 +2295,28 @@ svg#menu {
 @media(max-width:800px) {
     .footer {
         &_linkList-2 {
-              height: auto;
-              //justify-content: center;
+            height: auto;
+            //justify-content: center;
 
-              li {
-                  //width: 25%;
-                  display: block;
-                  margin-bottom: 2.5rem;
+            li {
+                //width: 25%;
+                display: block;
+                margin-bottom: 2.5rem;
 
-                  @media(max-width: 400px) {
-                      width: 50%;
-                      flex-shrink: 0;
-                      margin-right: 0;
-                      &:nth-of-type(3),
-                      &:nth-of-type(6),
-                      &:nth-of-type(2),
-                      &:nth-of-type(5) {
-                          text-align: left;
-                      }
-                  }
-              }
-          }
+                @media(max-width: 400px) {
+                    width: 50%;
+                    flex-shrink: 0;
+                    margin-right: 0;
+
+                    &:nth-of-type(3),
+                    &:nth-of-type(6),
+                    &:nth-of-type(2),
+                    &:nth-of-type(5) {
+                        text-align: left;
+                    }
+                }
+            }
+        }
 
     }
 }
@@ -2238,7 +2351,7 @@ svg#menu {
 
                 @media(max-width: 400px) {
                     width: 50%;
-                    margin-right:0 ;
+                    margin-right: 0;
                     // &:nth-of-type(3),
                     // &:nth-of-type(6),
                     // &:nth-of-type(2),
@@ -2248,6 +2361,7 @@ svg#menu {
                 }
             }
         }
+
         &_reg {
             order: 1;
             width: 50%;

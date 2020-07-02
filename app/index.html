@@ -89,10 +89,10 @@
 								</li>
 	
 								<li><a href="#" class="menu_link-2">Акции </a></li>
-								<li><a href="#" class="menu_link-3">Врачи</a></li>
-								<li><a href="#" class="menu_link-4">Отзывы</a></li>
+								<li><a data-scroll href="#doctors" class="menu_link-3">Врачи</a></li>
+								<li><a data-scroll href="#testimonials class=" menu_link-4">Отзывы</a></li>
 								<li><a href="#" class="menu_link-4">О нас</a></li>
-								<li><a href="#" class="menu_link-5">Контакты</a></li>
+								<li><a data-scroll href="#contacts" class="menu_link-5">Контакты</a></li>
 								<li class="last"><a href="#" class="menu_link-7">Документы</a></li>
 							</ul>
 						</nav>
@@ -126,7 +126,7 @@
 					</button>
 				</div>
 				<div class="advantages-wrapper">
-					<div class="advantages" data-section-name="advantages">
+					<div class="advantages" id="advantages">
 						<div class="advantages_item">
 							<img src="images/tools-icon.png" alt="Иконка" class="advantages_icon">
 							<div class="advantages_description">
@@ -165,7 +165,8 @@
 			</div>
 		</div>
 	</section>
-	<section class="service scroll" dats-section-name="service">
+	<section class="service" id="service">
+		<div class="service_tooth"><img src="images/service-tooth.png" alt="Картинка зуба"></div>
 		<div class="service_about">
 			<h2 class="service_title">Лечение кариеса</h2>
 			<p class="service_discription">Каждый зуб мы лечим по мировым стандартам под микроскопом.Все наши терапевты -
@@ -202,38 +203,48 @@
 			</div>
 		</div>
 		<div class="service_feedback">
-			<div class="service_price" data-section-name="price">
+			<div class="service_price" id="price">
 				<p>Цена от 2 990 рублей</p>
 				<p>Предварительная стоимость</p>
 			</div>
 			<form class="service_form feedback-form">
-				<p class="feedback-form_title">Закажите обратный звонок</p>
-				<p class="feedback-form_subtitle">Запись по телефону +7 (8152) 707-600</p>
+				<p class="feedback-form_title service_form-title">Закажите обратный звонок</p>
+				<p class="feedback-form_subtitle service_form-subtitle">Запись по телефону <a href="+7 (8152) 707-600"> +7 (8152)
+						707-600</a></p>
 				<hr>
 
-				<div class="feedback-form_field service_form-field">
-					<p class="feedback-form_caption">Ваше имя</p>
-					<input type="text" name="name" placeholder="Иван">
+				<div class="feedback-form_fields">
+					<div class="feedback-form_inputs">
+						<div class="feedback-form_field service_form-field">
+							<p class="feedback-form_caption service_form-caption">Ваше имя</p>
+							<input type="text" name="name" placeholder="Иван">
+						</div>
+						<div class="feedback-form_field service_form-field">
+							<p class="feedback-form_caption service_form-caption">Ваша фамилия</p>
+							<input type="text" name="surname" placeholder="Дендак">
+						</div>
+						<div class="feedback-form_field service_form-field">
+							<p class="feedback-form_caption service_form-caption">Ваш номер</p>
+							<input type="tel" name="tel" placeholder="+7 800 555 35 35">
+						</div>
+						<div class="feedback-form_field service_form-field">
+							<p class="feedback-form_caption service_form-caption">Комментарий</p>
+							<input type="text" name="comment">
+						</div>
+					</div>
+
+					<div class="service_form-order">
+						<button class="btn service_btn">Заказать звонок</button>
+						<p class="feedback-form_agreement service_form-agreement">Нажимая кнопку «Заказать звонок», вы
+							автоматически выражаете
+							<span><a href="">согласие на обработку</a></span>
+							своих персональных данных ООО «Глобал Дент».
+						</p>
+					</div>
 				</div>
-				<div class="feedback-form_field service_form-field">
-					<p class="feedback-form_caption">Ваша фамилия</p>
-					<input type="text" name="surname" placeholder="Дендак">
-				</div>
-				<div class="feedback-form_field service_form-field">
-					<p class="feedback-form_caption">Ваш номер</p>
-					<input type="tel" name="tel" placeholder="+7 800 555 35 35">
-				</div>
-				<div class="feedback-form_field service_form-field">
-					<p class="feedback-form_caption">Комментарий</p>
-					<input type="text" name="comment">
-				</div>
-				
-				<button class="btn service_btn">Заказать звонок</button>
-				<p class="service_form-agreement feedback-form_agreement">Нажимая кнопку «Заказать звонок», вы автоматически выражаете <span><a href="">согласие на обработку</a></span>
-				своих персональных данных ООО «Глобал Дент».
-				</p>
 			</form>
 		</div>
+
 	</section>
 	<section class="caries">
 		<div class="wrapper">
@@ -399,6 +410,7 @@
 	</section>
 
 	<section class="stages">
+		<div class="stages_tooth"><img src="images/service-tooth.png" alt="Картинка зуба"></div>
 		<h2 class="stages_title">Этапы работы</h2>
 		<p class="stages_subtitle subtitle">
 			Лечение кариеса зубов состоит из ряда последовательных<br>
@@ -533,7 +545,7 @@
 		</ol>
 	</section>
 	
-	<section class="testimonials" data-section-name="testimonials">
+	<section class="testimonials" id="testimonials">
 		<h4>Отзывы наших пациентов</h4>
 		<div class="btn-slider-prev testimonials_btn-prev"><span class="icon icon-expand_more"></span></div>
 		<div class="btn-slider-next testimonials_btn-next"><span class="icon icon-expand_more"></span></div>
@@ -690,11 +702,11 @@
 		<div class="wrapper">
 			<form class="communication_form feedback-form">
 				<p class="feedback-form_title communication_form-title">Заполните форму и закажите обратный звонок</p>
-				<p class="feedback-form_subtitle communication_form-subtitle">Запись по телефону +7 (8152) 707-600</p>
+				<p class="feedback-form_subtitle communication_form-subtitle">Запись по телефону <a href="+7 (8152) 707-600"> +7(8152)707-600</a></p>
 
-				<div class="communication_form-fields">
-					<div class="communication_form-inputs">
-						<div class="feedback-form_fiel communication_form-field">
+				<div class="communication_form-fields feedback-form_fields">
+					<div class="communication_form-inputs feedback-form_inputs">
+						<div class="feedback-form_field communication_form-field">
 							<p class="feedback-form_caption communication_form-caption">Ваше имя</p>
 							<input type="text" name="name" placeholder="Иван">
 						</div>
@@ -712,7 +724,7 @@
 						</div>
 					</div>
 	
-					<div>
+					<div class="communication_form-order">
 						<button class="btn communication_btn">Заказать обратный звонок</button>
 						<p class="feedback-form_agreement communication_form-agreement">Нажимая кнопку «Заказать звонок», вы автоматически выражаете
 						<span><a href="">согласие на обработку</a></span>
@@ -723,7 +735,7 @@
 			</form>
 		</div>
 	</section>
-	<section class="doctors" data-section-name="doctors">
+	<section class="doctors" id="doctors">
 		<div class="wrapper doctors_wrapper">
 			<h2>Наши врачи</h2>
 			<p class="doctors_subtitle subtitle">В команду попадает лишь 1 из 5 кандидатов.<br>Нам важно, чтобы врач был хорош не только в
@@ -845,7 +857,7 @@
 			<button class="btn btn--big">Смотреть все видео</button>
 		</div>
 	</section>
-	<section class="contacts" data-section-name="contacts">
+	<section class="contacts" id="contacts">
 		<h2>Наши контакты</h2>
 		<div class="wrapper">
 			<div class="contacts_data">
@@ -917,22 +929,22 @@
 				</div>
 				<ul class="footer_linkList-1 linkList">
 					<li>
-						<a href="#service" class="list-item-1">Об услуге</a>
+						<a data-scroll href="#service" class="list-item-1">Об услуге</a>
 					</li>
 					 <li>
-						<a id="price">Цены</a>
+						<a data-scroll href="#price">Цены</a>
 					</li>
 					 <li>
-						<a id="advantages">Преимущества</a>
+						<a data-scroll href="#advantages">Преимущества</a>
 					</li>
 					 <li>
-						<a id="doctors">Наши врачи</a>
+						<a data-scroll href="#doctors">Наши врачи</a>
 					</li>
 					 <li>
-						<a id="testimonials">Отзывы</a>
+						<a data-scroll href="#testimonials">Отзывы</a>
 					</li>
 					 <li>
-						<a id="contacts">Контакты</a>
+						<a data-scroll href="#contacts">Контакты</a>
 					</li>
 				</ul>
 				<div class="footer_reg">
@@ -962,7 +974,7 @@
 	
 <script src="js/libs.min.js"></script>
 <script src="slick/slick.js"></script>
-<script src="js/jquery-scrollify/jquery.scrollify.js"></script>
+<script src="js/smooth-scroll-master/smooth-scroll.polyfills.min.js"></script>
 <script>
 	$('.caries_slider').slick({
 	infinite: false,
@@ -1051,14 +1063,7 @@
 	});
 </script>
 <script>
-	//  $(function() {
-	//  $.scrollify({
-	//  section : ".scroll",
-	//  });
-	//  });
-	$(".list-item-1").on("click",function() {
-	$.scrollify.move($(this).attr("href"));
-	});
+	var scroll = new SmoothScroll('a[href*="#"]');
 </script>
 
 </body>
