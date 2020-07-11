@@ -61,7 +61,7 @@ var settings = {
     }
 };
  
-smartgrid('app/sass', settings);
+//smartgrid('app/sass', settings);
 
 gulp.task('sass', function() { // Создаем таск Sass
     return gulp.src('app/sass/**/*.scss') // Берем источник
