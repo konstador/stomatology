@@ -13,6 +13,7 @@ var gulp       = require('gulp'), // Подключаем Gulp
     autoprefixer = require('gulp-autoprefixer'),// Подключаем библиотеку для автоматического добавления префиксов
     smartgrid    = require('smart-grid');
     gcmq         = require('gulp-group-css-media-queries');
+const purgecss = require('purgecss');
 
 gulp.task ('grid', function() { // Создаем таск Smar-grid
     var smartgrid = require('smart-grid')});
@@ -142,13 +143,29 @@ gulp.task('prebuild', async function() {
 
 gulp.task('clear', function (callback) {
     return cache.clearAll();
-})
+});
 
-gulp.task('watch', function() {
+// gulp.task('purgecss', ()=> {
+//     return gulp.src('app/css/**/*.css')
+//         .pipe(rename({
+//             suffix: '.rejected'
+//         })
+//         .pipe(
+//             purgecss({
+//             content: ['app/**/*.html'],
+//             css: ['app/css/**/*.css'],
+//             rejected: true
+//             })
+//         )
+//         .pipe(gulp.dest('dist/css')),
+// });
+
+gulp.task('watch', () => {
     gulp.watch('app/sass/**/*.scss', gulp.parallel('sass')); // Наблюдение за sass файлами
     gulp.watch('app/*.html', gulp.parallel('code')); // Наблюдение за HTML файлами в корне проекта
     gulp.watch(['app/js/common.js', 'app/libs/**/*.js'], gulp.parallel('scripts')); // Наблюдение за главным JS файлом и за библиотеками
 });
+
 gulp.task('default', gulp.parallel(//'css-libs',
  'sass', 'scripts', 'browser-sync', 'watch'));
 gulp.task('build', gulp.parallel('prebuild', 'clean', 'img', 'sass', 'scripts','css-libs'));

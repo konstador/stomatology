@@ -55,9 +55,11 @@
 					<div class="header_nav">
 						<nav class="menu header_menu">
 							<button class="menu_toggle">
+								<label for="menu-toggle">
 								<img src="images/burger.png" alt="Кнопка меню">
-								</svg>
+								</label>
 							</button>
+							<input type="checkbox" id="menu-toggle">
 							<ul class="menu_list">
 								<li class="menu_item-1">
 									<a href="#" class="menu_link-1">Услуги
@@ -911,7 +913,7 @@
 	</section>
 	<section class="news">
 		<h4>Будьте в курсе наших новостей и предложений!</h4>
-		<p class="news_subtitle subtitle">Нажимая кнопку "Подписаться", вы автоматически
+		<p class="news_subtitle">Нажимая кнопку "Подписаться", вы автоматически
 			выражаете <a href="#">согласие на обработку</a> своих персональных данных ООО «Глобал Дент».
 		</p>
 		<form class="news_form">
@@ -1026,7 +1028,6 @@
 			}
 		}
 		]
-		
 	});
 </script>
 <script>
@@ -1042,9 +1043,9 @@
 	});
 </script>
 <script type="text/javascript">
-	$(".accordion_item-header").click(function () {
+	$(".accordion_item").click(function () {
 		$(".accordion_item").removeClass("accordion_item--active");
-		$(this).parent().toggleClass("accordion_item--active");
+		$(this).toggleClass("accordion_item--active");
 	});
 </script>
 <script>
@@ -1065,10 +1066,10 @@
 	var scroll = new SmoothScroll('a[href*="#"]');
 </script>
 <script type="text/javascript">
-	$(".menu_toggle").click(function () {
-		$(".menu_list ").toggleClass("menu_list--visible");
-		$(".menu_list").animate({left:'0px'}, "1000");
-	});
+	// $(".menu_toggle").click(function () {
+	// 	$(".menu_list ").toggleClass("menu_list--visible");
+	// 	$(".menu_list").animate({left:'0px'}, "1000");
+	// });
 </script>
 
 </body>

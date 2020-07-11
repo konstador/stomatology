@@ -973,7 +973,16 @@ a {
   display: none;
   height: 18px;
   width: 24px;
-  cursor: pointer; }
+  position: relative; }
+  .menu_toggle label {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer; }
   @media (max-width: 670px) {
     .menu_toggle {
       display: block;
@@ -1072,50 +1081,51 @@ svg#menu {
       -ms-flex-align: center;
           align-items: center;
   height: 40px;
-  width: 630px;
-  left: -1000px; }
+  width: 630px; }
   @media (max-width: 670px) {
     .menu_list {
-      display: none; } }
+      display: block;
+      position: absolute;
+      top: 75px;
+      height: auto;
+      width: 0%;
+      z-index: 1001;
+      background-color: #ffffff;
+      -webkit-box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+              box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
+      border-radius: 5px;
+      left: -1000px;
+      -webkit-transition: width 1s;
+      -o-transition: width 1s;
+      transition: width 1s; }
+      .menu_list > li {
+        height: auto !important;
+        margin-right: 0 !important;
+        padding-bottom: 5px;
+        padding-top: 5px;
+        padding-left: 30px;
+        border-bottom: solid 1px #EDEDEE;
+        -webkit-transition: all .2s ease-in-out;
+        -o-transition: all .2s ease-in-out;
+        transition: all .2s ease-in-out; }
+        .menu_list > li a {
+          line-height: 36px; }
+        .menu_list > li:hover {
+          border-bottom: 1px solid #EDEDEE !important; } }
   .menu_list > li {
     margin-right: 10px;
     height: 30px; }
     .menu_list > li:hover {
       border-bottom: 2px solid #0545BA; }
-  .menu_list--visible {
-    display: block;
-    position: absolute;
-    top: 75px;
-    height: auto;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    width: 100%;
-    z-index: 1001;
-    background-color: #ffffff;
-    -webkit-box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
-            box-shadow: 0px 4px 32px rgba(15, 27, 97, 0.06);
-    border-radius: 5px; }
-    .menu_list--visible > li {
-      height: auto !important;
-      margin-right: 0 !important;
-      padding-bottom: 5px;
-      padding-top: 5px;
-      padding-left: 30px;
-      border-bottom: solid 1px #EDEDEE;
-      -webkit-transition: all .2s ease-in-out;
-      -o-transition: all .2s ease-in-out;
-      transition: all .2s ease-in-out; }
-      .menu_list--visible > li:hover {
-        border-bottom: 1px solid #EDEDEE; }
-    .menu_list--visible a {
-      line-height: 36px; }
+
+input[type="checkbox"] {
+  position: absolute;
+  top: -1000; }
+
+input[type="checkbox"]:checked ~ .menu_list {
+  display: block;
+  left: 0;
+  width: 100%; }
 
 /************ END OF MENU BLOCK**********/
 .service {
@@ -1536,11 +1546,17 @@ svg#menu {
   background-size: contain;
   max-width: 1140px;
   margin: 0 auto;
+  padding-top: 100px;
+  position: relative;
   margin-bottom: -webkit-calc(2.525rem + 9.5625vw);
   margin-bottom: calc(2.525rem + 9.5625vw); }
   @media (min-width: 1200px) {
     .stages {
       margin-bottom: 14rem; } }
+  .stages_tooth {
+    position: absolute;
+    top: 0;
+    left: -50px; }
   .stages_title, .stages_subtitle {
     text-align: center; }
   .stages_subtitle {
@@ -1736,7 +1752,8 @@ svg#menu {
       line-height: 20px; }
   @media (max-width: 1200px) {
     .stages {
-      padding: 0 15px; }
+      padding-left: 15px;
+      padding-right: 15px; }
       .stages li:nth-of-type(1)::after,
       .stages li:nth-of-type(2)::after,
       .stages li:nth-of-type(3)::after,
@@ -1829,6 +1846,12 @@ svg#menu {
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center; } }
+  @media (max-width: 970px) {
+    .stages {
+      padding-top: 0; } }
+  @media (max-width: 820px) {
+    .stages_tooth {
+      display: none; } }
   @media (max-width: 750px) {
     .stages_item {
       margin: 0; }
@@ -1945,10 +1968,6 @@ svg#menu {
     margin-right: 15px;
     width: -webkit-calc(33.33333% - 30px);
     width: calc(33.33333% - 30px); }
-  .testimonials_userPic {
-    vertical-align: middle; }
-  .testimonials_userName {
-    vertical-align: middle; }
 
 .diff {
   padding-left: 40px;
@@ -2398,10 +2417,7 @@ svg#menu {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
+    display: flex; }
     .news_form input {
       max-width: 220px;
       height: 52px;
@@ -2418,7 +2434,9 @@ svg#menu {
         text-align: center; } }
   .news_subtitle {
     text-align: center;
-    padding-bottom: 4.7rem; }
+    padding-bottom: 4.7rem;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.6rem; }
 
 .footer {
   background-color: #02173D;
@@ -2625,13 +2643,14 @@ input[type=range] {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: none; }
+  background: transparent; }
 
 input[type=range]:focus {
   outline: none; }
 
 input[type=range]::-ms-track {
   width: 100%;
+  height: 100%;
   background: transparent;
   border-color: transparent;
   color: transparent; }
@@ -2645,6 +2664,13 @@ input[type=range]::-webkit-slider-thumb {
   background-image: url("../images/diff.png");
   cursor: pointer; }
 
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-color: transparent;
+  color: transparent; }
+
 /* All the same stuff for Firefox */
 input[type=range]::-moz-range-thumb {
   width: 32px;
@@ -2653,13 +2679,32 @@ input[type=range]::-moz-range-thumb {
   background-image: url("../images/diff.png");
   cursor: pointer; }
 
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border-color: transparent;
+  color: transparent; }
+
 /* All the same stuff for IE */
 input[type=range]::-ms-thumb {
   width: 32px;
   height: 100%;
-  background-color: none;
+  background: none;
   background-image: url("../images/diff.png");
   cursor: pointer; }
+
+input[type=range]::-ms-fill-lower {
+  width: 100%;
+  background: transparent;
+  border-color: transparent;
+  color: transparent; }
+
+input[type=range]:focus::-ms-fill-upper {
+  width: 100%;
+  background: transparent;
+  border-color: transparent;
+  color: transparent; }
 
 @media (max-width: 420px) {
   body {
@@ -2981,6 +3026,8 @@ input[type=range]::-ms-thumb {
   .news_form input {
     height: 32px;
     font-size: 12px;
-    line-height: 12px; } }
+    line-height: 12px; }
+  .news_subtitle {
+    font-size: 10px; } }
 
 /*# sourceMappingURL=stomatology.css.map */
