@@ -1120,7 +1120,7 @@ svg#menu {
 
 input[type="checkbox"] {
   position: absolute;
-  top: -1000; }
+  top: -1000px; }
 
 input[type="checkbox"]:checked ~ .menu_list {
   display: block;
